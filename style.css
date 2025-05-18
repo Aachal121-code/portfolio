@@ -176,14 +176,17 @@ html,body{
 .technical-skills h3{
     font-size: 2rem;
     text-align: center;
+    margin-top: 40px;
 }
 
 .skills p{
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
+    align-items: center;
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
+
 }
 
 .languages,
@@ -195,9 +198,19 @@ html,body{
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    width: 20rem;
+    width: 23rem;
     height: 20rem;
     align-items: center;
-    justify-content: center;
-    padding-left: 30px;
+    background-color: rgb(207, 220, 234);
+    border-radius: 20px;
+}
+
+.skill-list{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
