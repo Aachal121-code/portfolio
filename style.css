@@ -1,0 +1,203 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: content-box;
+}
+
+html,body{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to bottom, rgb(27, 29, 35),rgb(26, 38, 46),rgb(69, 122, 158),rgb(29, 96, 196));
+    scroll-behavior: auto;
+}
+
+.user-introduction {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.intro{
+    background-color: rgb(204, 217, 223);
+    width: 600px;
+    padding: 70px 60px 70px 60px;
+    border-style: groove;
+    box-shadow: 3px 5px 5px 3px black;
+    border-radius: 20px;
+    line-height: 1.8rem;
+}
+.intro h1{
+    font-size: 3rem;
+}
+
+.intro h3{
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+.intro p{
+    font-size: 1.3rem;
+}
+
+.intro a{
+    text-decoration: none;
+    border: 2px solid rgb(11, 214, 207);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    line-height: 8rem;
+    margin-left: 80px;
+    color: white;
+    background-color: rgb(30, 28, 28);
+}
+
+.intro a:hover{
+    background-color: rgb(16, 220, 235);
+    color: black;
+}
+
+.profile-picture{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.picture{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.profile-picture button{
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid rgb(8, 9, 9);
+    border-radius: 20px;
+    padding: 20px 0px 20px 0px;
+    color: white;
+    cursor: pointer;
+    background-color: blue;
+}
+#btn-resume:hover{
+    background-color: rgb(20, 76, 165);
+    scale: 1.1;
+}
+
+/* summary-education section1  */
+
+.summary-education {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+.summary h3{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.summary p{
+    font-size: 1.5rem;
+    width: 40rem;
+    height: 20rem;
+    color: white;
+    padding: 90px 0px 40px 40px;
+    line-height: 2.5rem;
+    /* box-shadow: 1px 1px 1px 1px; */
+    /* background-color: rgb(77, 92, 123); */
+}
+
+.summary p:hover{
+    border: 2px solid white;
+    font-size: 1.5rem;
+    scale: 1.2;
+}
+
+.education{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.education h3{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.education p{
+    font-size: 1.5rem;
+    width: 35rem;
+    height: 15rem;
+    color: white;
+    padding: 130px 0px 40px 40px;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.education p:hover{
+    border: 2px solid white;
+    font-size: 1.5rem;
+    scale: 1.2;
+}
+
+/*technical-skills section2 */
+.technical-skills{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.technical-skills h2{
+    font-size: 3rem;
+    color: white;
+}
+.skills{
+    width: 80rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.technical-skills h3{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.skills p{
+    font-size: 1.5rem;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.languages,
+.FrameworksLibraries,
+.VersionControl,
+.DevelopmentTools,
+.Concepts,
+.SoftSkills {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 20rem;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+}
