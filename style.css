@@ -6,7 +6,7 @@
 
 html,body{
     font-family: 'Times New Roman', Times, serif;
-    background-image: linear-gradient(to bottom, rgb(27, 29, 35),rgb(26, 38, 46),rgb(69, 122, 158),rgb(29, 96, 196));
+    background-color: black;
     scroll-behavior: auto;
 }
 
@@ -113,14 +113,12 @@ html,body{
     color: white;
     padding: 90px 0px 40px 40px;
     line-height: 2.5rem;
-    /* box-shadow: 1px 1px 1px 1px; */
-    /* background-color: rgb(77, 92, 123); */
 }
 
 .summary p:hover{
-    border: 2px solid white;
     font-size: 1.5rem;
     scale: 1.2;
+    background-color: rgb(54, 53, 53);
 }
 
 .education{
@@ -145,9 +143,9 @@ html,body{
     text-align: center;
 }
 .education p:hover{
-    border: 2px solid white;
     font-size: 1.5rem;
     scale: 1.2;
+    background-color: rgb(54, 53, 53);
 }
 
 /*technical-skills section2 */
@@ -177,15 +175,23 @@ html,body{
     font-size: 2rem;
     text-align: center;
     margin-top: 40px;
+    color: white;
 }
 
 .skills p{
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid white;
     border-radius: 20px;
     padding: 10px;
+    color: white;
+    
+
+}
+
+.skills p:hover{
+    background-image: linear-gradient(to right, rgb(6, 6, 244), rgb(24, 24, 197),rgb(41, 41, 170),rgb(57, 57, 143),rgb(69, 69, 119),rgb(92, 92, 116));
 
 }
 
@@ -197,12 +203,17 @@ html,body{
 .SoftSkills {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 2px solid white;
     width: 23rem;
     height: 20rem;
     align-items: center;
-    background-color: rgb(207, 220, 234);
     border-radius: 20px;
+}
+.skills:hover #box{
+    opacity: 0.3;
+}
+.skills #box:hover{
+    opacity: 1;
 }
 
 .skill-list{
@@ -213,4 +224,38 @@ html,body{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+
+/* section 3 */
+
+.certificates{
+    height: 100vh;
+    width: 100%;
+    margin-top: 7rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.certificates h3{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.certificates .images{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    max-height: 200vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.images img{
+    border: 1px solid black;
+    height: 400px;
+    width: 300px;
+}
+.images img:hover{
+    scale: 1.6;
 }
