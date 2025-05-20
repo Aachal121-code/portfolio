@@ -301,7 +301,7 @@ html,body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10rem;
+    gap: 6rem;
 }
 
 .projects h3{   
@@ -330,7 +330,7 @@ html,body{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: rgb(35, 29, 29);
+    background-color: rgb(56, 55, 55);
 }
 
 .project-list p{
@@ -381,3 +381,41 @@ html,body{
     font-size: 1.2rem;
 }
 
+.show-project{
+    height: 300px;
+    font-size: 2rem;
+    text-align: center;
+}
+.show-project a{
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 4;
+    color: white;
+    background-color: rgb(6, 6, 100);
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 15px 10px 15px;
+}
+.show-project #show:hover{
+    background-color: blue;
+}
+
+/* footer{
+    height: 400px;
+    width: 100%;
+    background-color: azure;
+    position: relative;
+    opacity: 0.2;
+} */
+footer{
+    height: 400px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+}
+footer p{
+    font-size: 1.5rem;
+    opacity: 2;
+    color: blue;
+    font-weight: bolder;
+}
