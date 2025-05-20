@@ -69,7 +69,13 @@ html,body{
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(62, 58, 58);
+}
+.picture i{
+    font-size: 17rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .profile-picture button{
@@ -80,10 +86,10 @@ html,body{
     padding: 20px 0px 20px 0px;
     color: white;
     cursor: pointer;
-    background-color: blue;
+    background-color: rgb(18, 18, 137);
 }
 #btn-resume:hover{
-    background-color: rgb(20, 76, 165);
+    background-color: rgb(27, 3, 245);
     scale: 1.1;
 }
 
@@ -119,6 +125,7 @@ html,body{
     font-size: 1.5rem;
     scale: 1.2;
     background-color: rgb(54, 53, 53);
+    border-radius: 25px;
 }
 
 .education{
@@ -146,6 +153,7 @@ html,body{
     font-size: 1.5rem;
     scale: 1.2;
     background-color: rgb(54, 53, 53);
+    border-radius: 25px;
 }
 
 /*technical-skills section2 */
@@ -265,18 +273,26 @@ html,body{
 /* section4 */
 
 .experience{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.exp-block{
     height: 100vh;
     width: 100%;
     color: white;
 }
 
-.experience h3{
+.exp-block h3{
     font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
 }
 
-.experience #experience-heading{
+.exp-block #experience-heading{
     font-size: 2rem;
     color: rgb(232, 224, 212);
     margin-top: 10rem;
@@ -284,12 +300,18 @@ html,body{
     line-height: 1.5;
 }
 
-.experience #exp-description{
+.exp-block #exp-description{
     font-size: 1.7rem;
     width: 50rem;
     margin-top: 3rem;
     margin-left: 7rem;
     line-height: 1.5;
+}
+
+.image-block img{
+    height: 600px;
+    width: 700px;
+    padding-right: 50px;
 }
 
 .projects{
@@ -400,6 +422,7 @@ html,body{
     background-color: blue;
 }
 
+/* footer section6 */
 footer{
     height: 600px;
     width: 100%;
@@ -428,6 +451,7 @@ footer p{
     flex-direction: column;
     padding: 50px;
     border: 1px solid rgb(253, 250, 250);
+    border-radius: 20px;
     background-color: rgb(2, 2, 2);
 }
 #textarea{
@@ -444,6 +468,11 @@ footer p{
     padding: 10px;
     border-radius: 20px;
     margin-top: 20px;
-    background-color: blue;    
+    border: 2px solid white;
+    background-color: rgb(8, 8, 126);    
     color: white;
+}
+
+.contact-details button:hover{
+    background-color: blue;
 }
