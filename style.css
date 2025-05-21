@@ -161,11 +161,43 @@ html,body{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.button-block{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.button-block button{
+    height: fit-content;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(17, 17, 116);
+    color: white;
+    transition: background 0.3s ease;
+    box-shadow: 0 3px 3px;
+}
+
+.button-block button:hover{
+    background-color: blue;
+    scale: 0.9;
+}
+.skills-block{
+    width: 100%;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.technical-skills h2{
+.skills h2{
     font-size: 3rem;
     color: white;
 }
@@ -176,10 +208,10 @@ html,body{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
-.technical-skills h3{
+.skills h3{
     font-size: 2rem;
     text-align: center;
     margin-top: 40px;
