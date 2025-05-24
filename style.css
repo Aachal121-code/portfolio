@@ -8,8 +8,27 @@ html,body{
     font-family: 'Times New Roman', Times, serif;
     background-color: black;
     scroll-behavior: auto;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+    margin: 0;
+    padding: 0;
 }
 
+header.user-introduction,
+section.summary-education,
+section.technical-skills,
+section.experience,
+section.projects,
+footer {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+
+/* existing styles below */
 .user-introduction {
     width: 100%;
     height: 100vh;
@@ -99,61 +118,86 @@ html,body{
     height: 100vh;
     display: flex;
     justify-content: space-around;
-}
-
-.summary{
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-}
-.summary h3{
-    font-size: 2.5rem;
-    color: white;
-}
-
-.summary p{
-    font-size: 1.5rem;
-    width: 40rem;
-    height: 20rem;
-    color: white;
-    padding: 90px 0px 40px 40px;
-    line-height: 2.5rem;
-}
-
-.summary p:hover{
-    font-size: 1.5rem;
-    scale: 1.2;
-    background-color: rgb(54, 53, 53);
+    align-items: center;
+    gap: 4rem;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 3rem 5rem;
     border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.education{
-    width: 500px;
+.summary {
+    width: 45%;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.education h3{
-    font-size: 2.5rem;
-    color: white;
+.summary h3 {
+    font-size: 2.8rem;
+    color: #e0e0e0;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
-.education p{
-    font-size: 1.5rem;
-    width: 35rem;
-    height: 15rem;
-    color: white;
-    padding: 130px 0px 40px 40px;
-    line-height: 2.5rem;
+.summary p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #dcdcdc;
+    font-weight: 400;
+}
+
+.summary p:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    transform: scale(1.07);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.education {
+    width: 45%;
+    height: 38%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.education h3 {
+    font-size: 2.8rem;
+    color: #e0e0e0;
+    border-bottom: 3px solid #e0e0e0;
+    padding-bottom: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.education p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #dcdcdc;
     text-align: center;
+    font-weight: 400;
 }
-.education p:hover{
-    font-size: 1.5rem;
-    scale: 1.2;
-    background-color: rgb(54, 53, 53);
-    border-radius: 25px;
+
+.education p:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    transform: scale(1.07);
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
 /*technical-skills section2 */
@@ -163,7 +207,14 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    /* gap: 1rem; */
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 3rem 5rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
 }
 
 .button-block{
@@ -173,23 +224,47 @@ html,body{
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
 }
 
 .button-block button{
     height: fit-content;
-    font-size: 2rem;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: rgb(17, 17, 116);
-    color: white;
-    transition: background 0.3s ease;
-    box-shadow: 0 3px 3px;
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-width: 180px;
+    text-align: center;
 }
 
 .button-block button:hover{
-    background-color: blue;
-    scale: 0.9;
+    background-color: #f0f0f0;
+    color: #1f1c2c;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 768px) {
+    .button-block {
+        gap: 2rem;
+    }
+    .button-block button {
+        font-size: 1.6rem;
+        padding: 12px 30px;
+        min-width: 140px;
+    }
+}
+
+/* skills block */
 .skills-block{
     width: 100%;
     display: flex;
@@ -197,10 +272,13 @@ html,body{
     flex-direction: column;
     align-items: center;
 }
+
 .skills h2{
-    font-size: 3rem;
-    color: white;
+    font-size: 2rem;
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
 }
+
 .skills{
     width: 80rem;
     display: flex;
@@ -208,31 +286,32 @@ html,body{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .skills h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 40px;
-    color: white;
+    color: #f0f0f0;
 }
 
 .skills p{
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
-    border: 1px solid white;
+    border: 1px solid #f0f0f0;
     border-radius: 20px;
     padding: 10px;
-    color: white;
-    
-
+    color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .skills p:hover{
-    background-image: linear-gradient(to right, rgb(6, 6, 244), rgb(24, 24, 197),rgb(41, 41, 170),rgb(57, 57, 143),rgb(69, 69, 119),rgb(92, 92, 116));
-
+    background-image: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    transform: scale(1.1);
 }
 
 .languages,
@@ -243,15 +322,18 @@ html,body{
 .SoftSkills {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    border: 2px solid #f0f0f0;
     width: 23rem;
-    height: 20rem;
+    height: 18rem;
     align-items: center;
     border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
+
 .skills:hover #box{
     opacity: 0.3;
 }
+
 .skills #box:hover{
     opacity: 1;
 }
@@ -266,62 +348,98 @@ html,body{
     gap: 10px;
 }
 
-
 /* section 3 */
+.certificates-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 8rem;
+}
+.certificates-block img{
+    height: 25rem;
+    width: 20rem;
+}
 
+.certificates-block img:hover{
+    scale: 1.2;
+}
 /* section4 */
 
 .experience{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 3rem 5rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .exp-block{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
-    color: white;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.185);
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .exp-block h3{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     text-align: center;
     text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
 }
 
 .exp-block #experience-heading{
     font-size: 2rem;
-    color: rgb(232, 224, 212);
-    margin-top: 10rem;
-    margin-left: 7rem;
-    line-height: 1.5;
+    color: #dcdcdc;
+    margin-top: 2rem;
+    margin-left: 0;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .exp-block #exp-description{
     font-size: 1.7rem;
-    width: 50rem;
-    margin-top: 3rem;
-    margin-left: 7rem;
-    line-height: 1.5;
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .image-block img{
     height: 600px;
     width: 700px;
     padding-right: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
-
 .projects{
     height: 100vh;
     width: 100%;
     max-height: 300vh;
     width: 100%;
     color: white;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
     gap: 6rem;
 }
 
@@ -351,7 +469,7 @@ html,body{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: rgb(56, 55, 55);
+    background-color: rgba(56, 55, 55, 0.267);
 }
 
 .project-list p{

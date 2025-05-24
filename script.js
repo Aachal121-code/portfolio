@@ -3,9 +3,10 @@ const btn1 = document.querySelector('#skills-btn');
 const btn2 = document.querySelector('#certificate-btn');
 
 const skillsData = document.querySelector(".skills-block");
+const skillsHTML = skillsData.innerHTML;
 
 btn1.addEventListener('click', () => {
-    datadisplay.innerHTML = skillsData.innerHTML;
+    datadisplay.innerHTML = skillsHTML;
 });
 
 btn2.addEventListener('click', () => {
