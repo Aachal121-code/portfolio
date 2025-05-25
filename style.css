@@ -1,7 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 html,body{
@@ -9,10 +9,12 @@ html,body{
     background-color: black;
     scroll-behavior: auto;
     height: 100%;
+    width: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-padding-top: 0;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
 }
 
@@ -44,6 +46,7 @@ footer {
     width: 600px;
     padding: 70px 60px 70px 60px;
     border-style: groove;
+    max-width: 100%;
     box-shadow: 3px 5px 5px 3px black;
     border-radius: 20px;
     line-height: 1.8rem;
@@ -116,6 +119,7 @@ footer {
 
 .summary-education {
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -164,7 +168,7 @@ footer {
 }
 
 .education {
-    width: 45%;
+    width: 30%;
     height: 38%;
     display: flex;
     flex-direction: column;
@@ -368,6 +372,7 @@ footer {
 
 .experience{
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,7 +465,7 @@ footer {
 .Simple-Calculator,
 .Contact-Management-App{
     height: 25rem;
-    width: 20rem;
+    width: 25rem;
     border: 1px solid white;
     border-radius: 20px;
     text-align: center;
@@ -541,12 +546,12 @@ footer {
 
 /* footer section6 */
 footer{
-    height: 600px;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(233, 238, 236, 0.2);
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
 }
 footer p{
     width: 35rem;
@@ -560,8 +565,8 @@ footer p{
 }
 
 .contact-details{
-    height: 400px;
-    width: 600px;
+    height: 32rem;
+    width: 40rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -573,7 +578,8 @@ footer p{
 }
 #textarea{
     width: 35rem;
-    height: 100px;
+    height: fit-content;
+    min-height: 5rem;
     margin-top: 40px;
     font-size: 1.5rem;
     padding: 10px;
@@ -581,7 +587,7 @@ footer p{
 
 .contact-details button{
     font-size: 2rem;
-    width: 100px;
+    max-width: 120px;
     padding: 10px;
     border-radius: 20px;
     margin-top: 20px;
