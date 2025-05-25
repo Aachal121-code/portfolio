@@ -39,11 +39,12 @@ footer {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    background: linear-gradient(135deg, #1f1c2c, #928dab9d);
 }
 
 .intro{
     background-color: rgb(204, 217, 223);
-    width: 600px;
+    width: 50rem;
     padding: 70px 60px 70px 60px;
     border-style: groove;
     max-width: 100%;
@@ -168,8 +169,8 @@ footer {
 }
 
 .education {
-    width: 30%;
-    height: 38%;
+    width: 40%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -328,7 +329,7 @@ footer {
     flex-direction: column;
     border: 2px solid #f0f0f0;
     width: 23rem;
-    height: 18rem;
+    height: 20rem;
     align-items: center;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1);
