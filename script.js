@@ -1,3 +1,13 @@
+document.getElementById("btn-resume").addEventListener("click", () => {
+    const filename = "resume.pdf";
+    const a = document.createElement('a');
+    a.href = "resume.pdf";
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
+
 const datadisplay = document.getElementById("datadisplay");
 const btn1 = document.querySelector('#skills-btn');
 const btn2 = document.querySelector('#certificate-btn');
