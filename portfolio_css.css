@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.fullscreen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+.Portfolio-headings {
+    width: 15%;
+    height: 100vh;
+    background-color: #60606067;
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.Portfolio-headings button{
+    display: block; 
+    border: none; 
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 0px 20px 20px 0px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#profile i{
+    padding-right: 12px;
+    font-size: 1.5rem;
+}
+
+.Portfolio-headings button:hover{
+    background-color: #02020273;
+    
+}
+@media (max-width: 780px) {
+    .Portfolio-headings{
+        padding: 0%;
+    }
+    .Portfolio-headings button{
+        font-size: 0.8rem;
+    }
+    #profile i{
+    padding-right: 8px;
+    font-size: 1.5rem;
+    }
+}
+
+.profile-info{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
