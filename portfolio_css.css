@@ -70,32 +70,87 @@ body{
 }
 
 .displayarea{
-    display: flex;
-    justify-content: center;
+    position: relative;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .profileInfo{
+    background-color: #faf8f835;
     width: 80%;
-    height: 20vh;
-    margin-top: 6rem;
-    border-radius: 0px 40px 0px 40px;
-    background-color: rgba(255, 255, 255, 0.137);
+    height: 15rem;
+    display: flex;
+    padding-top: 30px;
+    margin-top: 7rem;
+    border-radius: 50px 50px 0px 50px;
+}
+
+.profileTextWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    gap: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .profileLogo{
-    font-size: 17rem;
+    font-size: 20rem;
     color: white;
-    background-color: black;
-    border-radius: 50%;
-
 }
 
+.profileName{
+    font-size: 4rem;
+    color: white;
+}
+
+.profileRole{
+    font-size: 2.5rem;
+    color: white;
+    
+}
 
 @media (max-width: 780px) {
     .profileInfo{
         width: 90%;
         height: 15vh;
+        margin-left: 1rem;
+    }
+    .profileTextWrapper{
+        margin-left: 15px;
+        gap: 0.5rem;
+    }
+    .profileLogo{
+        font-size: 10rem;
+    }
+    .profileName{
+        font-size: 2rem;
+        margin-top: 1rem; 
+        margin-left: 2.5rem;
+    }
+    .profileRole{
+        font: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .profileInfo{
+        width: 90%;
+        height: 12vh;
+        padding-top: 0;
+    }
+    .profileTextWrapper{
+        margin-left: 2px;
+    }
+    .profileLogo{
+        font-size: 5rem;
+    }
+    .profileName{
+        font-size: 1.3rem;
+        margin-left: 1.5rem;
+    }
+    .profileRole{
+        font-size: 1rem;
     }
 }

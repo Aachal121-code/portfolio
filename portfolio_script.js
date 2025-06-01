@@ -13,7 +13,19 @@ profile.addEventListener('click',()=>{
         profileLogo.innerHTML = `<i class="fa fa-user-circle" aria-hidden="true"></i>`;
         profileInfo.appendChild(profileLogo);
 
+        const profileTextWrapper = document.createElement("div");
+        profileTextWrapper.className = "profileTextWrapper";
         
+        const profileName = document.createElement("h2");
+        profileName.className = "profileName";
+        profileName.innerHTML = "Aachal Bhonde" 
+        
+        const profileRole = document.createElement("h3");
+        profileRole.className = "profileRole";
+        profileRole.innerHTML = "Web Developer";
+        profileTextWrapper.appendChild(profileName);
+        profileTextWrapper.appendChild(profileRole);
+        profileInfo.appendChild(profileTextWrapper);
 
     } 
 })
