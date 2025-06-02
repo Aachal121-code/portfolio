@@ -188,7 +188,7 @@ body{
     background-color: blue;
 }
 
-/* .summary{
+.summary{
     position: absolute;
     width: 65rem;
     height: 13rem;
@@ -208,4 +208,4 @@ body{
     position: absolute; 
     top: 34rem;
     left: 10rem;
-} */
+}

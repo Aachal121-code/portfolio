@@ -43,15 +43,15 @@ profile.addEventListener('click',()=>{
         buttonCount.appendChild(followButton);
         displayarea.appendChild(buttonCount);
 
-        // const objective = document.createElement("h3");
-        // objective.className = "objective";
-        // objective.innerHTML = "Objective :";
-        // displayarea.appendChild(objective);
+        const objective = document.createElement("h3");
+        objective.className = "objective";
+        objective.innerHTML = "Objective :";
+        displayarea.appendChild(objective);
 
-        // const summary = document.createElement("p");
-        // summary.className = "summary";
-        // summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
-        // displayarea.appendChild(summary);
+        const summary = document.createElement("p");
+        summary.className = "summary";
+        summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
+        displayarea.appendChild(summary);
 
     } 
 })
