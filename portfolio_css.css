@@ -91,7 +91,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 50px;
+    padding-left: 150px;
     gap: 1rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -119,7 +119,7 @@ body{
         margin-left: 1rem;
     }
     .profileTextWrapper{
-        margin-left: 15px;
+        padding-left: 15px;
         gap: 0.5rem;
     }
     .profileLogo{
@@ -141,7 +141,7 @@ body{
         padding-top: 0;
     }
     .profileTextWrapper{
-        margin-left: 2px;
+        padding-left: 2px;
     }
     .profileLogo{
         font-size: 5rem;
@@ -154,3 +154,58 @@ body{
         font-size: 1rem;
     }
 }
+
+.buttonCount {
+    position: absolute;
+    display: inline-flex;
+    top: 25rem;
+    right: 15rem;
+    gap: 2rem;
+}
+
+.followCount {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    color: black;
+}
+
+.followButton {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.8rem;
+    padding: 10px 40px;
+    background-color: rgb(15, 15, 132);
+    color: white;
+    border-radius: 20px;
+}
+
+.followButton:hover{
+    scale: 1.1;
+    background-color: blue;
+}
+
+/* .summary{
+    position: absolute;
+    width: 65rem;
+    height: 13rem;
+    border-radius: 0px 40px 0px 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    top: 37rem;
+    background-color: rgb(237, 231, 231);
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.objective{
+    font-size: 2rem;
+    color: white;
+    position: absolute; 
+    top: 34rem;
+    left: 10rem;
+} */

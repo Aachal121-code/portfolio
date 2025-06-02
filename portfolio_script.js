@@ -1,4 +1,4 @@
-const  profile = document.querySelector("#profile");
+const profile = document.querySelector("#profile");
 const displayarea=document.querySelector(".displayarea");
 displayarea.className="displayarea";
 
@@ -23,9 +23,35 @@ profile.addEventListener('click',()=>{
         const profileRole = document.createElement("h3");
         profileRole.className = "profileRole";
         profileRole.innerHTML = "Web Developer";
+
         profileTextWrapper.appendChild(profileName);
         profileTextWrapper.appendChild(profileRole);
         profileInfo.appendChild(profileTextWrapper);
+
+        const followCount = document.createElement("p");
+        followCount.className = "followCount";
+        followCount.innerHTML = "0";
+        console.log(followCount);
+
+        const followButton = document.createElement("button");
+        followButton.className = "followButton";
+        followButton.innerHTML = "Follow";
+
+        const buttonCount = document.createElement("div");
+        buttonCount.className = "buttonCount";
+        buttonCount.appendChild(followCount);
+        buttonCount.appendChild(followButton);
+        displayarea.appendChild(buttonCount);
+
+        // const objective = document.createElement("h3");
+        // objective.className = "objective";
+        // objective.innerHTML = "Objective :";
+        // displayarea.appendChild(objective);
+
+        // const summary = document.createElement("p");
+        // summary.className = "summary";
+        // summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
+        // displayarea.appendChild(summary);
 
     } 
 })
