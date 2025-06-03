@@ -190,7 +190,7 @@ body{
 
 .summary{
     position: absolute;
-    width: 65rem;
+    width: 80rem;
     height: 13rem;
     border-radius: 0px 40px 0px 40px;
     display: flex;
@@ -207,5 +207,5 @@ body{
     color: white;
     position: absolute; 
     top: 34rem;
-    left: 10rem;
+    left: 12rem;
 }

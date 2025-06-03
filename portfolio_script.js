@@ -1,4 +1,5 @@
 const profile = document.querySelector("#profile");
+const education = document.querySelector("#education");
 const displayarea=document.querySelector(".displayarea");
 displayarea.className="displayarea";
 
@@ -53,5 +54,18 @@ profile.addEventListener('click',()=>{
         summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
         displayarea.appendChild(summary);
 
+        let isFollowing = localStorage.getItem('isFollowing') === 'true';
+        followButton.innerHTML = isFollowing ? 'Unfollow' : 'Follow';
+        if(isFollowing){
+            followCount.innerHTML = parseInt(followCount.innerHTML) + 1;
+        }
+        followButton.addEventListener('click',()=>{
+            isFollowing = !isFollowing;
+            followButton.innerHTML = isFollowing ? 'Unfollow' : 'Follow';
+            const currentCount = parseInt(followCount.innerHTML);
+            followCount.innerHTML = isFollowing ? currentCount + 1 : currentCount - 1;
+            localStorage.setItem('isFollowing',isFollowing);
+        })
     } 
 })
+
