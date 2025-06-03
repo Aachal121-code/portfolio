@@ -83,7 +83,7 @@ body{
     height: 15rem;
     display: flex;
     padding-top: 30px;
-    margin-top: 7rem;
+    margin-top: 3rem;
     border-radius: 50px 50px 0px 50px;
 }
 
@@ -104,7 +104,9 @@ body{
 .profileName{
     font-size: 4rem;
     color: white;
+    
 }
+
 
 .profileRole{
     font-size: 2.5rem;
@@ -158,7 +160,7 @@ body{
 .buttonCount {
     position: absolute;
     display: inline-flex;
-    top: 25rem;
+    top: 20rem;
     right: 15rem;
     gap: 2rem;
 }
@@ -181,6 +183,7 @@ body{
     background-color: rgb(15, 15, 132);
     color: white;
     border-radius: 20px;
+    border: 2px solid blue;
 }
 
 .followButton:hover{
@@ -188,24 +191,24 @@ body{
     background-color: blue;
 }
 
-.summary{
+.eduSumBox{
     position: absolute;
     width: 80rem;
-    height: 13rem;
-    border-radius: 0px 40px 0px 40px;
-    display: flex;
-    align-items: center;
+    height: 25rem;
     padding: 20px;
-    top: 37rem;
+    top: 28rem;
     background-color: rgb(237, 231, 231);
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 0px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+
+}
+.summary{
+    padding: 10px 20px;
 }
 
-.objective{
-    font-size: 2rem;
-    color: white;
-    position: absolute; 
-    top: 34rem;
-    left: 12rem;
+.education{
+    padding: 10px 20px;
 }

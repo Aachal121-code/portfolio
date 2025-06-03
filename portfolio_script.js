@@ -46,16 +46,31 @@ profile.addEventListener('click',()=>{
 
         const objective = document.createElement("h3");
         objective.className = "objective";
-        objective.innerHTML = "Objective :";
-        displayarea.appendChild(objective);
-
+        objective.innerHTML = "Objective";
+        
         const summary = document.createElement("p");
         summary.className = "summary";
         summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
-        displayarea.appendChild(summary);
+        
+        const eduName = document.createElement("h3");
+        eduName.className = "eduName";
+        eduName.innerHTML = "Education";
 
+        const education = document.createElement("p");
+        education.className = "education";
+        education.innerHTML = "Bachelor of Computer Applications (BCA)<br>Rashtrasant Tukadoji Maharaj Nagpur University <br> 2022 – 2025<br><br>"
+        
+        const eduSumBox = document.createElement('div');
+        eduSumBox.className = "eduSumBox";
+        eduSumBox.appendChild(eduName);
+        eduSumBox.appendChild(education);
+        eduSumBox.appendChild(objective);
+        eduSumBox.appendChild(summary);
+        displayarea.appendChild(eduSumBox);
+        
         let isFollowing = localStorage.getItem('isFollowing') === 'true';
         followButton.innerHTML = isFollowing ? 'Unfollow' : 'Follow';
+
         if(isFollowing){
             followCount.innerHTML = parseInt(followCount.innerHTML) + 1;
         }
@@ -69,3 +84,6 @@ profile.addEventListener('click',()=>{
     } 
 })
 
+// education.addEventListener('click',()=>{
+//     if(!)
+// })
