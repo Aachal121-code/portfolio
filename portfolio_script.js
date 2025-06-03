@@ -29,6 +29,20 @@ profile.addEventListener('click',()=>{
         profileTextWrapper.appendChild(profileRole);
         profileInfo.appendChild(profileTextWrapper);
 
+        const github = document.createElement("a");
+        github.href = "https://github.com/Aachal121-code";
+        github.target = "_blank";
+        github.className = "github";
+        github.innerHTML = "Github";
+        displayarea.appendChild(github);
+
+        const linkedin = document.createElement("a");
+        linkedin.href = "https://www.linkedin.com/in/aachal-bhonde-a028b9318/";
+        linkedin.target = "_blank";
+        linkedin.className = "linkedin";
+        linkedin.innerHTML = "Linkedin";
+        displayarea.appendChild(linkedin);
+
         const followCount = document.createElement("p");
         followCount.className = "followCount";
         followCount.innerHTML = "0";

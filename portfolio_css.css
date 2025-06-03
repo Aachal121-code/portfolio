@@ -25,7 +25,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     
 }
 
@@ -162,13 +162,13 @@ body{
     display: inline-flex;
     top: 20rem;
     right: 15rem;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .followCount {
     width: fit-content;
     height: fit-content;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.553);
     padding: 15px 50px;
     font-size: 1.5rem;
     border-radius: 20px;
@@ -188,6 +188,7 @@ body{
 
 .followButton:hover{
     scale: 1.1;
+    transition: all 0.3s ease;
     background-color: blue;
 }
 
@@ -211,4 +212,40 @@ body{
 
 .education{
     padding: 10px 20px;
+}
+
+.github {
+    position: absolute;
+    font-size: 2rem;
+    text-decoration: none;
+    border: 2px solid blue;
+    background: rgb(15, 15, 132);
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    top: 20rem;
+    left: 35rem;
+    color: white;
+}
+
+.github:hover{
+    transition: all 0.3s ease;
+    background-color: blue;
+}
+
+.linkedin {
+    position: absolute;
+    font-size: 2rem;
+    text-decoration: none;
+    border: 2px solid blue;
+    background: rgb(15, 15, 132);
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    top: 20rem;
+    left: 45rem;
+    color: white;
+}
+
+.linkedin:hover{
+    transition: all 0.3s ease;
+    background-color: blue;
 }
