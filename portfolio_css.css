@@ -4,10 +4,10 @@
     padding: 0px;
 }
 
-body{
-    height: 100vh;
-    width: 100%;
-    background-color: black;
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #f3f3f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .fullscreen{
@@ -26,36 +26,43 @@ body{
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    
+    /* Sidebar with glassmorphism effect */
+    background: rgba(40, 40, 60, 0.85);
+    box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+    backdrop-filter: blur(4px);
+    border-right: 1.5px solid rgba(255,255,255,0.08);
 }
-
+    
 .Portfolio-headings button{
     display: block; 
     border: none; 
     width: 100%;
     height: 50px;
     font-size: 1.5rem;
-    background-color: transparent;
     border-radius: 0px 20px 20px 0px;
-    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #232526 60%, #393e46 100%);
+    color: #ffd700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: none;
+    outline: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
-.Portfolio-headings button:focus{
-    background-color: black;
+.Portfolio-headings button:hover, .Portfolio-headings button:focus {
+    background: linear-gradient(90deg, #ffd700 0%, #232526 100%);
+    color: #232526;
+    box-shadow: 0 4px 16px #ffd70033;
     border: 2px solid rgb(142, 142, 199);
 }
-
 
 #profile i{
     padding-right: 12px;
     font-size: 1.5rem;
 }
 
-.Portfolio-headings button:hover{
-    background-color: #02020273;
-    
-}
 @media (max-width: 780px) {
     .Portfolio-headings{
         padding: 0%;
@@ -77,14 +84,19 @@ body{
     justify-content: center;
 }
 
+/* Profile card with glass effect and soft shadow */
 .profileInfo{
-    background-color: #faf8f835;
     width: 80%;
     height: 15rem;
     display: flex;
     padding-top: 30px;
     margin-top: 3rem;
-    border-radius: 50px 50px 0px 50px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 32px 32px 0 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(2px);
+    transition: box-shadow 0.3s, border-radius 0.3s;
 }
 
 .profileTextWrapper{
@@ -96,22 +108,25 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* Profile name and role with gradient text */
+.profileName, .profileRole {
+    background: linear-gradient(90deg, #ffd700 30%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #00000022;
+    font-size: 4rem;
+}
+
+/* Profile icon with soft glow */
 .profileLogo{
     font-size: 20rem;
     color: white;
+    text-shadow: 0 4px 24px #ffd70044, 0 1px 2px #00000088;
 }
-
-.profileName{
-    font-size: 4rem;
-    color: white;
-    
-}
-
 
 .profileRole{
     font-size: 2.5rem;
-    color: white;
-    
 }
 
 @media (max-width: 780px) {
@@ -168,11 +183,23 @@ body{
 .followCount {
     width: fit-content;
     height: fit-content;
-    background-color: rgba(255, 255, 255, 0.553);
-    padding: 15px 50px;
-    font-size: 1.5rem;
-    border-radius: 20px;
-    color: black;
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid #ffd700;
+    box-shadow: 0 4px 24px rgba(255, 215, 0, 0.12), 0 1.5px 8px rgba(0,0,0,0.10);
+    backdrop-filter: blur(6px);
+    padding: 10px 48px;
+    font-size: 1.6rem;
+    border-radius: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.followCount:hover {
+    box-shadow: 0 8px 32px #ffd70055, 0 2px 12px #23252622;
+    border-color: #fff700;
 }
 
 .followButton {
@@ -192,19 +219,23 @@ body{
     background-color: blue;
 }
 
+
+/* Card shadow for education/summary */
 .eduSumBox{
     position: absolute;
     width: 80rem;
     height: 25rem;
     padding: 20px;
     top: 28rem;
-    background-color: rgb(237, 231, 231);
     font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 0px 40px 0px 40px;
     display: flex;
     flex-direction: column;
-
+    background: rgba(255,255,255,0.10);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    border-radius: 0 32px 0 32px;
+    border: 1.5px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(2px);
 }
 .summary{
     padding: 10px 20px;
@@ -218,34 +249,355 @@ body{
     position: absolute;
     font-size: 2rem;
     text-decoration: none;
-    border: 2px solid blue;
-    background: rgb(15, 15, 132);
     padding: 5px 15px 5px 15px;
     border-radius: 20px;
     top: 20rem;
     left: 35rem;
-    color: white;
-}
-
-.github:hover{
-    transition: all 0.3s ease;
-    background-color: blue;
 }
 
 .linkedin {
     position: absolute;
     font-size: 2rem;
     text-decoration: none;
-    border: 2px solid blue;
-    background: rgb(15, 15, 132);
     padding: 5px 15px 5px 15px;
     border-radius: 20px;
     top: 20rem;
     left: 45rem;
-    color: white;
 }
 
-.linkedin:hover{
-    transition: all 0.3s ease;
-    background-color: blue;
+/* Buttons and links with modern look */
+.followButton, .github, .linkedin {
+    background: linear-gradient(90deg, #232526 60%, #594e0d 100%);
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #ffd70033;
+    color: #ffd700;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
+.followButton:hover, .github:hover, .linkedin:hover {
+    color: #232526;
+    background: linear-gradient(90deg, #ffd700 0%, #232526 100%);
+    box-shadow: 0 4px 16px #ffd70055;
+}
+
+/* Responsive styles for all devices */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    .fullscreen {
+        flex-direction: column;
+        height: auto;
+    }
+    .Portfolio-headings {
+        flex-direction: row;
+        width: 100vw;
+        height: auto;
+        min-width: 0;
+        max-width: 100vw;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        border-radius: 0 0 20px 20px;
+    }
+    .Portfolio-headings button {
+        font-size: 1.1rem;
+        height: 40px;
+        min-width: 80px;
+        border-radius: 0 0 10px 10px;
+        margin: 0 4px;
+    }
+    .displayarea {
+        width: 100vw;
+        min-height: 70vh;
+        height: auto;
+        padding: 0;
+    }
+    .profileInfo {
+        width: 95vw;
+        height: auto;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 16px;
+        border-radius: 24px;
+    }
+    .profileTextWrapper {
+        padding-left: 0;
+        gap: 0.7rem;
+        align-items: center;
+    }
+    .profileLogo {
+        font-size: 8rem;
+    }
+    .profileName {
+        font-size: 2rem;
+    }
+    .profileRole {
+        font-size: 1.1rem;
+    }
+    .eduSumBox {
+        width: 96vw;
+        height: auto;
+        font-size: 1.1rem;
+        top: 22rem;
+        padding: 12px;
+        border-radius: 0 20px 0 20px;
+    }
+    .github, .linkedin {
+        left: 5vw;
+        top: 14rem;
+        font-size: 1.1rem;
+        padding: 4px 10px;
+    }
+    .buttonCount {
+        right: 5vw;
+        top: 14rem;
+        gap: 1.2rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .fullscreen {
+        flex-direction: column;
+        height: auto;
+    }
+    .Portfolio-headings {
+        flex-direction: row;
+        width: 100vw;
+        height: auto;
+        gap: 0.2rem;
+        padding: 0.2rem 0;
+        border-radius: 0 0 12px 12px;
+    }
+    .Portfolio-headings button {
+        font-size: 0.9rem;
+        height: 32px;
+        min-width: 44px;
+        border-radius: 0 0 6px 6px;
+        padding: 0 6px;
+    }
+    .displayarea {
+        width: 100vw;
+        min-height: 60vh;
+        height: auto;
+        padding: 0;
+    }
+    .profileInfo {
+        width: 99vw;
+        margin-top: 0.5rem;
+        border-radius: 12px;
+        padding-top: 4px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profileTextWrapper {
+        padding-left: 0;
+        gap: 0.4rem;
+        align-items: center;
+    }
+    .profileLogo {
+        font-size: 3.5rem;
+    }
+    .profileName {
+        font-size: 1.1rem;
+    }
+    .profileRole {
+        font-size: 0.8rem;
+    }
+    .eduSumBox {
+        width: 99vw;
+        font-size: 0.9rem;
+        top: 10rem;
+        padding: 3px;
+        border-radius: 0 12px 0 12px;
+    }
+    .github, .linkedin {
+        position: static;
+        display: inline-block;
+        margin: 0.3rem 0.3rem 0 0;
+        font-size: 0.9rem;
+        padding: 2px 6px;
+    }
+    .buttonCount {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
+        margin-top: 0.3rem;
+    }
+    .followCount, .followButton {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+        border-radius: 6px;
+    }
+    .skills, .FrameworksLibraries, .VersionControl, .DevelopmentTools, .Concepts, .SoftSkills {
+        border-radius: 8px;
+        padding: 0.4rem;
+    }
+}
+
+/* Ultra small devices */
+@media (max-width: 400px) {
+    .profileLogo {
+        font-size: 2.2rem;
+    }
+    .profileName {
+        font-size: 0.9rem;
+    }
+    .profileRole {
+        font-size: 0.7rem;
+    }
+    .eduSumBox {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+}
+
+/* skills section  */
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.10);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding: 2rem 2vw;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-languages {
+    min-width: 220px;
+    flex: 2 1 340px;
+    max-width: 400px;
+}
+
+.skills-other {
+    min-width: 180px;
+    flex: 1 1 220px;
+    max-width: 260px;
+}
+
+.skills-languages h3, .skills-other h3 {
+    margin-bottom: 1.2rem;
+    color: #ffd700;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.skill-bar {
+    margin-bottom: 1.2rem;
+}
+
+.skill-bar span {
+    font-weight: 600;
+    color: #232526;
+    color: white;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 1.08rem;
+}
+
+.progress {
+    background: #232526;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 1px 6px #ffd70033;
+    position: relative;
+}
+
+.progress-value {
+    background: linear-gradient(90deg, #300aad 60%, #8987b5 100%);
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1.2s cubic-bezier(.4,2,.6,1);
+    box-shadow: 0 2px 8px #c7c7d655;
+    position: relative;
+}
+
+.progress-value::after {
+    content: attr(data-percent) '%';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    color: #232526;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.85;
+}
+
+.skills-other ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-other li {
+    background: rgba(255,255,255,0.18);
+    color: white;
+    margin-bottom: 0.7rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-weight: 500;
+    box-shadow: 0 1px 4px #ffd70022;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
+
+.skills-other li:hover {
+    background: #ffd70033;
+    color: #232526;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .skillsContainer {
+        gap: 1.5rem;
+    }
+    .skills-languages, .skills-other {
+        max-width: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .skillsContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.2rem 2vw;
+    }
+    .skills-languages, .skills-other {
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .skillsContainer {
+        padding: 0.7rem 1vw;
+        gap: 1.2rem;
+    }
+    .skills-languages h3, .skills-other h3 {
+        font-size: 1.05rem;
+    }
+    .skill-bar span {
+        font-size: 0.98rem;
+    }
+    .progress {
+        height: 15px;
+    }
+    .skills-other li {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.7rem;
+    }
+}
+
