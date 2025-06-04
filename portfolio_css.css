@@ -112,6 +112,7 @@ body {
 .profileName, .profileRole {
     background: linear-gradient(90deg, #ffd700 30%, #fff 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     text-shadow: 0 2px 8px #00000022;
