@@ -118,13 +118,13 @@ skills.addEventListener('click', () => {
 
     // Language data
     const languages = [
-        { name: "HTML5", percent: 85 },
-        { name: "CSS3", percent: 80 },
-        { name: "JavaScript", percent: 70 },
-        { name: "Python (Basics)", percent: 60 },
-        { name: "C", percent: 85 },
-        { name: "C++", percent: 55 },
-        { name: "SQL (Basics)", percent: 50 }
+        { name: "HTML5", percent: 95 },
+        { name: "CSS3", percent: 90 },
+        { name: "JavaScript", percent: 85 },
+        { name: "Python (Basics)", percent: 70 },
+        { name: "C", percent: 80 },
+        { name: "C++", percent: 75 },
+        { name: "SQL (Basics)", percent: 65 }
     ];
 
     languages.forEach(lang => {
@@ -148,7 +148,7 @@ skills.addEventListener('click', () => {
         skillsLanguages.appendChild(skillBar);
     });
 
-    // --- Other Skills Sections ---
+    // --- Other Skills Sections (all 5 boxes) ---
     function createSkillList(title, items) {
         const section = document.createElement("div");
         section.className = "skills-other";
@@ -165,20 +165,25 @@ skills.addEventListener('click', () => {
         return section;
     }
 
-    // Data for other skills
+    // Data for other skills (all 5 groups)
     const frameworks = ["React.js", "Bootstrap", "DOM Manipulation"];
     const versionControl = ["Git", "GitHub"];
     const devTools = ["Visual Studio Code"];
     const concepts = ["Responsive Web Design", "RESTful APIs", "Component-Based Architecture"];
     const softSkills = ["Problem-Solving", "Team Collaboration", "Code Optimization"];
 
-    // Append all sections
+    // Create a row for other skills
+    const skillsOthersRow = document.createElement("div");
+    skillsOthersRow.className = "skills-others-row";
+    skillsOthersRow.appendChild(createSkillList("Frameworks & Libraries", frameworks));
+    skillsOthersRow.appendChild(createSkillList("Version Control", versionControl));
+    skillsOthersRow.appendChild(createSkillList("Development Tools", devTools));
+    skillsOthersRow.appendChild(createSkillList("Concepts", concepts));
+    skillsOthersRow.appendChild(createSkillList("Soft Skills", softSkills));
+
+    // Append both columns to container
     skillsContainer.appendChild(skillsLanguages);
-    skillsContainer.appendChild(createSkillList("Frameworks & Libraries", frameworks));
-    skillsContainer.appendChild(createSkillList("Version Control", versionControl));
-    skillsContainer.appendChild(createSkillList("Development Tools", devTools));
-    skillsContainer.appendChild(createSkillList("Concepts", concepts));
-    skillsContainer.appendChild(createSkillList("Soft Skills", softSkills));
+    skillsContainer.appendChild(skillsOthersRow);
 
     displayarea.appendChild(skillsContainer);
 
