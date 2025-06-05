@@ -652,3 +652,160 @@ body {
         padding: 0.5rem 0.7rem 0.5rem 1.1rem;
     }
 }
+
+/* certfications section  */
+.certificateContainer {
+    background: rgba(255,255,255,0.07);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(48,10,173,0.13);
+    padding: 2.5rem 2vw 2rem 2vw;
+    max-width: 1400px;
+    width: 99vw;
+    margin: 4rem auto;
+    text-align: center;
+    animation: fadeInCert 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+.certificateContainer h2 {
+    color: #300aad;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ffd700 30%, #300aad 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.certificateList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.certificateItem {
+    background: linear-gradient(120deg, #fffbe0ee 0%, #e7e9f7ee 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 18px #300aad22;
+    padding: 2.2rem 1.5rem 1.7rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 320px;
+    max-width: 370px;
+    flex: 1 1 320px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: certPopIn 0.7s cubic-bezier(.4,2,.6,1) forwards;
+    animation-delay: var(--delay, 0s);
+    border-left: 8px solid #ffd700;
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.certificateItem:hover {
+    box-shadow: 0 8px 32px #ffd70044, 0 2px 12px #300aad33;
+    transform: translateY(-4px) scale(1.03);
+    border-left: 8px solid #300aad;
+}
+
+.cert-icon {
+    font-size: 2.3rem;
+    color: #300aad;
+    margin-bottom: 1.1rem;
+    background: #ffd70022;
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+}
+
+.cert-title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #232526;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.cert-org {
+    color: #300aad;
+    font-size: 1.07rem;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+.cert-year {
+    color: #ffd700;
+    font-size: 1.01rem;
+    margin-left: 0.7rem;
+    font-weight: 600;
+}
+
+.cert-link {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(90deg, #300aad 60%, #ffd700 100%);
+    padding: 0.42rem 1.3rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.7rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px #300aad22;
+}
+.cert-link:hover {
+    background: linear-gradient(90deg, #ffd700 60%, #300aad 100%);
+    color: #232526;
+    box-shadow: 0 4px 16px #ffd70055, 0 2px 12px #300aad33;
+}
+
+@keyframes certPopIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+@keyframes fadeInCert {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .certificateContainer {
+        max-width: 98vw;
+    }
+    .certificateList {
+        gap: 1.5rem;
+    }
+    .certificateItem {
+        min-width: 240px;
+        max-width: 100%;
+        flex: 1 1 240px;
+    }
+}
+@media (max-width: 700px) {
+    .certificateContainer {
+        padding: 1.2rem 0.5rem;
+    }
+    .certificateList {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+    .certificateContainer h2 {
+        font-size: 1.3rem;
+    }
+    .certificateItem {
+        padding: 1.1rem 0.7rem;
+        min-width: 0;
+        width: 100%;
+        max-width: 500px;
+    }
+}
