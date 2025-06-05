@@ -260,3 +260,67 @@ certifications.addEventListener('click', () => {
     certificateContainer.appendChild(certificateList);
     displayarea.appendChild(certificateContainer);
 });
+
+
+experience.addEventListener('click', () => {
+    displayarea.innerHTML = '';
+
+    // Main container
+    const expContainer = document.createElement("div");
+    expContainer.className = "experienceContainer";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Experience";
+    expContainer.appendChild(heading);
+
+    // Experience cards data
+    const experiences = [
+        {
+            title: "Student Developer",
+            org: "Rashtrasant Tukadoji Maharaj Nagpur University",
+            period: "2022 – 2025",
+            details: [
+                "Developed front-end projects using HTML, CSS, JavaScript, and React.js.",
+                "Applied Agile methodology and version control (Git) to track project development and collaborate with peers.",
+                "Improved algorithmic problem-solving speed and accuracy by 30% through regular practice on coding platforms."
+            ],
+            icon: "💻"
+        },
+        {
+            title: "Academic Projects",
+            org: "Personal & Team Projects",
+            period: "2022 – 2025",
+            details: [
+                "Built responsive web apps and portfolios as part of coursework and self-learning.",
+                "Collaborated with classmates on group assignments, focusing on clean code and UI/UX.",
+                "Explored RESTful APIs and component-based architecture in React."
+            ],
+            icon: "📚"
+        }
+    ];
+
+    // Experience cards UI
+    const expList = document.createElement("div");
+    expList.className = "experienceList";
+
+    experiences.forEach((exp, i) => {
+        const card = document.createElement("div");
+        card.className = "experienceCard";
+        card.style.animationDelay = `${i * 0.15 + 0.1}s`;
+
+        card.innerHTML = `
+            <div class="exp-icon">${exp.icon}</div>
+            <div class="exp-title">${exp.title}</div>
+            <div class="exp-org">${exp.org}</div>
+            <div class="exp-period">${exp.period}</div>
+            <ul class="exp-details">
+                ${exp.details.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+        `;
+        expList.appendChild(card);
+    });
+
+    expContainer.appendChild(expList);
+    displayarea.appendChild(expContainer);
+});
+
