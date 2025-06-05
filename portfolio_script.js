@@ -195,3 +195,68 @@ skills.addEventListener('click', () => {
         });
     }, 200);
 });
+
+
+certifications.addEventListener('click', () => {
+    displayarea.innerHTML = '';
+
+    // Main container
+    const certificateContainer = document.createElement("div");
+    certificateContainer.className = "certificateContainer";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Certifications";
+    certificateContainer.appendChild(heading);
+
+    const certificates = [
+        {
+            title: "C Programming",
+            org: "MKCL",
+            year: "2023",
+            link: "#"
+        },
+        {
+            title: "C++ Programming",
+            org: "MKCL",
+            year: "2023",
+            link: "#"
+        },
+        {
+            title: "Python Programming",
+            org: "MKCL",
+            year: "2024",
+            link: "#"
+        },
+        {
+            title: "Code; Without Barriers - AI concepts",
+            org: "RTMSSU",
+            year: "2025",
+            link: "#"
+        },
+        {
+            title: "Git & GitHub",
+            org: "Udemy",
+            year: "2025",
+            link: "#"
+        }
+    ];
+
+    const certificateList = document.createElement("ul");
+    certificateList.className = "certificateList";
+
+    certificates.forEach((cert, i) => {
+        const li = document.createElement("li");
+        li.className = "certificateItem";
+        li.style.animationDelay = `${i * 0.12 + 0.1}s`;
+
+        li.innerHTML = `
+            <div class="cert-title">${cert.title}</div>
+            <div class="cert-org">${cert.org} <span class="cert-year">${cert.year}</span></div>
+            <a href="${cert.link}" target="_blank" class="cert-link">View Certificate</a>
+        `;
+        certificateList.appendChild(li);
+    });
+
+    certificateContainer.appendChild(certificateList);
+    displayarea.appendChild(certificateContainer);
+});
