@@ -118,13 +118,13 @@ skills.addEventListener('click', () => {
 
     // Language data
     const languages = [
-        { name: "HTML5", percent: 95 },
-        { name: "CSS3", percent: 90 },
-        { name: "JavaScript", percent: 85 },
-        { name: "Python (Basics)", percent: 70 },
+        { name: "HTML5", percent: 90 },
+        { name: "CSS3", percent: 80 },
+        { name: "JavaScript", percent: 80 },
+        { name: "Python (Basics)", percent: 60 },
         { name: "C", percent: 80 },
-        { name: "C++", percent: 75 },
-        { name: "SQL (Basics)", percent: 65 }
+        { name: "C++", percent: 50 },
+        { name: "SQL (Basics)", percent: 50 }
     ];
 
     languages.forEach(lang => {
@@ -213,31 +213,31 @@ certifications.addEventListener('click', () => {
             title: "C Programming",
             org: "MKCL",
             year: "2023",
-            link: "#"
+            link: "certificates/C_programming.jpg"
         },
         {
             title: "C++ Programming",
             org: "MKCL",
             year: "2023",
-            link: "#"
+            link: "certificates/C++_programming.jpg"
         },
         {
             title: "Python Programming",
             org: "MKCL",
             year: "2024",
-            link: "#"
+            link: "certificates/Python.jpg"
+        },
+        {
+            title: "Web Development",
+            org: "crescentweb Technology",
+            year: "2023",
+            link: "certificates/Web_development.jpg"
         },
         {
             title: "Code; Without Barriers - AI concepts",
             org: "RTMSSU",
             year: "2025",
-            link: "#"
-        },
-        {
-            title: "Git & GitHub",
-            org: "Udemy",
-            year: "2025",
-            link: "#"
+            link: "certificates/codeWbarriers.png"
         }
     ];
 
