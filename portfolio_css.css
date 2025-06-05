@@ -55,6 +55,9 @@ body {
     background: linear-gradient(90deg, #ffd700 0%, #232526 100%);
     color: #232526;
     box-shadow: 0 4px 16px #ffd70033;
+}
+
+.Portfolio-headings button:focus {
     border: 2px solid rgb(142, 142, 199);
 }
 
