@@ -30,9 +30,9 @@ This is a personal portfolio website for Aachal Ashok Bhonde, a Web Developer In
 
 ## Project Structure
 
-- `index.html` - Main HTML file containing the website structure
-- `style.css` - CSS file for styling the website
-- `script.js` - JavaScript file for interactive features
+- `portfolio_html.html` - Main HTML file containing the website structure
+- `portfolio_css.css` - CSS file for styling the website
+- `portfolio_script.js` - JavaScript file for interactive features
 - `resume.pdf` - Downloadable resume linked from the site
 - `certificates/` - Folder containing certificate images displayed on the site
 
