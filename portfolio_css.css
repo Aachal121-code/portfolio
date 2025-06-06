@@ -1129,17 +1129,22 @@ body {
 }
 @media (max-width: 700px) {
     .projectContainer {
-        padding: 1.2rem 0.5rem;
+        padding: 1.2rem 0.2rem;
     }
     .projectScroll {
         gap: 1rem;
     }
     .projectCard {
-        padding: 1.1rem 0.7rem;
-        min-width: 220px;
-        max-width: 95vw;
+        padding: 1.1rem 0.5rem;
+        min-width: 210px;
+        max-width: 90vw;
     }
     .projectContainer h2 {
         font-size: 1.3rem;
+    }
+    .project-arrow {
+        height: 28px;
+        width: 28px;
+        font-size: 1.6rem; ;
     }
 }

@@ -353,7 +353,7 @@ project.addEventListener('click', () => {
             "Built a single-page React application for managing contact data with CRUD operations and local storage persistence.",
             "Used React hooks for state management and component reusability, achieving modular and scalable code structure."
         ],
-        link: "https://github.com/yourusername/contact-management-app"
+        link: "https://github.com/Aachal121-code/contact-app"
     },
     {
         title: "Currency Converter",
@@ -362,7 +362,7 @@ project.addEventListener('click', () => {
             "Created a web app that integrates real-time currency exchange data using a public RESTful API.",
             "Implemented input validation, loading indicators, and responsive UI to enhance usability."
         ],
-        link: "https://github.com/yourusername/currency-converter"
+        link: "https://github.com/Aachal121-code/Currency-Converter"
     },
     {
         title: "Responsive Portfolio Website",
@@ -371,17 +371,36 @@ project.addEventListener('click', () => {
             "Developed a responsive and visually appealing portfolio website using HTML5 and modern CSS techniques, including Flexbox and media queries.",
             "Demonstrated growth in front-end development skills by creating a clean, user-friendly design optimized for multiple devices."
         ],
-        link: "https://yourusername.github.io/portfolio"
+        link: "https://github.com/Aachal121-code/portfolio"
     },
     {
-        title: "Simple Calculator",
-        tech: "C Language",
+        title: "To-Do List App",
+        tech: "JavaScript, HTML, CSS",
         details: [
-            "Engineered a command-line calculator in C supporting arithmetic operations and modular code structure.",
-            "Refactored logic to improve performance and reduce time complexity in computation."
+            "This is a simple TODO application frontend that allows users to add, edit, delete, and mark tasks as completed.",
+            "This project includes only the frontend part and does not include the backend/server functionality."
         ],
-        link: "#" // Or your repo link
-    }
+        link: "https://github.com/Aachal121-code/ToDo-list" // Or your repo link
+    },
+    {
+        title: "BMI Calculator",
+        tech: "JavaScript, HTML, CSS",
+        details: [
+            "A simple and user-friendly BMI Calculator that helps users determine their Body Mass Index based on their height and weight.",
+            "This application provides instant feedback on whether a user is underweight, normal weight, overweight, or obese."
+        ],
+        link: "https://github.com/Aachal121-code/BMI-calculator" // Or your repo link
+    },
+    {
+        title: "FruitMart Website",
+        tech: "JavaScript, HTML, CSS",
+        details: [
+            "This is a simple responsive website for FruitMart, showcasing various grocery and organic products.",
+            "The project is built using HTML and CSS, with a focus on clean design and user-friendly interface."
+        ],
+        link: "https://github.com/Aachal121-code/FruitMart" // Or your repo link
+    },
+    
 ];
 
     // Scrollable row
