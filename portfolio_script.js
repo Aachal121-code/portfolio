@@ -324,3 +324,102 @@ experience.addEventListener('click', () => {
     displayarea.appendChild(expContainer);
 });
 
+
+project.addEventListener('click', () => {
+    displayarea.innerHTML = '';
+
+    // Main container
+    const projectContainer = document.createElement("div");
+    projectContainer.className = "projectContainer";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Projects";
+    projectContainer.appendChild(heading);
+
+    // Arrow buttons
+    const leftArrow = document.createElement("button");
+    leftArrow.className = "project-arrow left";
+    leftArrow.innerHTML = "&#8592;";
+    const rightArrow = document.createElement("button");
+    rightArrow.className = "project-arrow right";
+    rightArrow.innerHTML = "&#8594;";
+
+    // Projects data
+    const projects = [
+    {
+        title: "Contact Management App",
+        tech: "React, JavaScript, CSS",
+        details: [
+            "Built a single-page React application for managing contact data with CRUD operations and local storage persistence.",
+            "Used React hooks for state management and component reusability, achieving modular and scalable code structure."
+        ],
+        link: "https://github.com/yourusername/contact-management-app"
+    },
+    {
+        title: "Currency Converter",
+        tech: "HTML, CSS, JavaScript, REST API",
+        details: [
+            "Created a web app that integrates real-time currency exchange data using a public RESTful API.",
+            "Implemented input validation, loading indicators, and responsive UI to enhance usability."
+        ],
+        link: "https://github.com/yourusername/currency-converter"
+    },
+    {
+        title: "Responsive Portfolio Website",
+        tech: "HTML, CSS, JavaScript",
+        details: [
+            "Developed a responsive and visually appealing portfolio website using HTML5 and modern CSS techniques, including Flexbox and media queries.",
+            "Demonstrated growth in front-end development skills by creating a clean, user-friendly design optimized for multiple devices."
+        ],
+        link: "https://yourusername.github.io/portfolio"
+    },
+    {
+        title: "Simple Calculator",
+        tech: "C Language",
+        details: [
+            "Engineered a command-line calculator in C supporting arithmetic operations and modular code structure.",
+            "Refactored logic to improve performance and reduce time complexity in computation."
+        ],
+        link: "#" // Or your repo link
+    }
+];
+
+    // Scrollable row
+    const projectScroll = document.createElement("div");
+    projectScroll.className = "projectScroll";
+
+    projects.forEach((proj, i) => {
+        const card = document.createElement("div");
+        card.className = "projectCard";
+        card.style.animationDelay = `${i * 0.12 + 0.1}s`;
+
+        card.innerHTML = `
+        <div class="proj-title">${proj.title}</div>
+        <div class="proj-tech">${proj.tech}</div>
+        <ul class="proj-details">
+        ${proj.details.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+        <a href="${proj.link}" target="_blank" class="proj-link">View Project</a>
+    `;
+        projectScroll.appendChild(card);
+    });
+
+    // Arrow scroll logic
+    leftArrow.onclick = () => {
+        projectScroll.scrollBy({ left: -350, behavior: 'smooth' });
+    };
+    rightArrow.onclick = () => {
+        projectScroll.scrollBy({ left: 350, behavior: 'smooth' });
+    };
+
+    // Assemble
+    const arrowWrap = document.createElement("div");
+    arrowWrap.className = "project-arrow-wrap";
+    arrowWrap.appendChild(leftArrow);
+    arrowWrap.appendChild(projectScroll);
+    arrowWrap.appendChild(rightArrow);
+
+    projectContainer.appendChild(arrowWrap);
+    displayarea.appendChild(projectContainer);
+});
+
