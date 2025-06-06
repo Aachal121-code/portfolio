@@ -7,6 +7,11 @@ const project = document.querySelector("#project");
 const displayarea=document.querySelector(".displayarea");
 displayarea.className="displayarea";
 
+// Show profile section by default on page load
+window.addEventListener('DOMContentLoaded', () => {
+    profile.click();
+});
+
 profile.addEventListener('click', () => {
     displayarea.innerHTML = '';
 

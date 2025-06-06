@@ -16,6 +16,10 @@ body {
     display: flex;
 }
 
+.nav-active {
+    border: 2px solid rgb(142, 142, 199);
+    color: blue;
+}
 
 .Portfolio-headings {
     width: 15%;
@@ -88,7 +92,7 @@ body {
 
 /* Profile card with glass effect and soft shadow */
 .profileCard {
-    background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.902);
     border-radius: 36px;
     box-shadow: 0 12px 48px 0 rgba(48,10,173,0.13), 0 1.5px 12px #ffd70022;
     max-width: 1200px;
