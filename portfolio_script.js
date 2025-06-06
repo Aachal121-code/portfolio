@@ -7,100 +7,93 @@ const project = document.querySelector("#project");
 const displayarea=document.querySelector(".displayarea");
 displayarea.className="displayarea";
 
-let prof = profile.addEventListener('click',()=>{
-    displayarea.innerHTML = ''; 
-    if(!document.querySelector(".profileInfo")){
-        const profileInfo=document.createElement("div");
-        profileInfo.className="profileInfo";
-        displayarea.appendChild(profileInfo);
+profile.addEventListener('click', () => {
+    displayarea.innerHTML = '';
 
-        const profileLogo = document.createElement("i");
-        profileLogo.className = "profileLogo";
-        profileLogo.innerHTML = `<i class="fa fa-user-circle" aria-hidden="true"></i>`;
-        profileInfo.appendChild(profileLogo);
+    // Profile Card Container
+    const profileCard = document.createElement("div");
+    profileCard.className = "profileCard";
 
-        const profileTextWrapper = document.createElement("div");
-        profileTextWrapper.className = "profileTextWrapper";
-        
-        const profileName = document.createElement("h2");
-        profileName.className = "profileName";
-        profileName.innerHTML = "Aachal Bhonde" 
-        
-        const profileRole = document.createElement("h3");
-        profileRole.className = "profileRole";
-        profileRole.innerHTML = "Web Developer";
+    // Row for logo and name/role
+    const profileRow = document.createElement("div");
+    profileRow.className = "profileRow";
 
-        profileTextWrapper.appendChild(profileName);
-        profileTextWrapper.appendChild(profileRole);
-        profileInfo.appendChild(profileTextWrapper);
+    // Simple, professional logo (use initials or icon)
+    const profileLogo = document.createElement("div");
+    profileLogo.className = "profileLogo";
+    // You can use initials or a font-awesome icon
+    profileLogo.innerHTML = `<i class="fa fa-user"></i>`;
+    profileRow.appendChild(profileLogo);
 
-        const github = document.createElement("a");
-        github.href = "https://github.com/Aachal121-code";
-        github.target = "_blank";
-        github.className = "github";
-        github.innerHTML = "Github";
-        displayarea.appendChild(github);
+    // Name and Role
+    const profileNameRole = document.createElement("div");
+    profileNameRole.className = "profileNameRole";
+    profileNameRole.innerHTML = `
+        <div class="profileName">Aachal Bhonde</div>
+        <div class="profileRole">Web Developer</div>
+    `;
+    profileRow.appendChild(profileNameRole);
 
-        const linkedin = document.createElement("a");
-        linkedin.href = "https://www.linkedin.com/in/aachal-bhonde-a028b9318/";
-        linkedin.target = "_blank";
-        linkedin.className = "linkedin";
-        linkedin.innerHTML = "Linkedin";
-        displayarea.appendChild(linkedin);
+    profileCard.appendChild(profileRow);
 
-        const followCount = document.createElement("p");
-        followCount.className = "followCount";
-        followCount.innerHTML = "0";
+    // Social Links
+    const socialLinks = document.createElement("div");
+    socialLinks.className = "profileSocial";
+    socialLinks.innerHTML = `
+        <a href="https://github.com/Aachal121-code" target="_blank" class="profileSocialLink github">
+            <i class="fa fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" class="profileSocialLink linkedin">
+            <i class="fa fa-linkedin"></i> LinkedIn
+        </a>
+    `;
+    profileCard.appendChild(socialLinks);
 
-        const followButton = document.createElement("button");
-        followButton.className = "followButton";
-        followButton.innerHTML = "Follow";
+    // Follow Button & Count
+    const followWrap = document.createElement("div");
+    followWrap.className = "profileFollowWrap";
+    const followCount = document.createElement("span");
+    followCount.className = "profileFollowCount";
+    followCount.innerHTML = localStorage.getItem('isFollowing') === 'true' ? "1" : "0";
+    const followButton = document.createElement("button");
+    followButton.className = "profileFollowBtn";
+    let isFollowing = localStorage.getItem('isFollowing') === 'true';
+    followButton.innerHTML = isFollowing ? "Unfollow" : "Follow";
+    followWrap.appendChild(followButton);
+    followWrap.appendChild(followCount);
+    profileCard.appendChild(followWrap);
 
-        const buttonCount = document.createElement("div");
-        buttonCount.className = "buttonCount";
-        buttonCount.appendChild(followCount);
-        buttonCount.appendChild(followButton);
-        displayarea.appendChild(buttonCount);
+    followButton.addEventListener('click', () => {
+        isFollowing = !isFollowing;
+        followButton.innerHTML = isFollowing ? "Unfollow" : "Follow";
+        followCount.innerHTML = isFollowing ? "1" : "0";
+        localStorage.setItem('isFollowing', isFollowing);
+    });
 
-        const objective = document.createElement("h3");
-        objective.className = "objective";
-        objective.innerHTML = "Objective";
-        
-        const summary = document.createElement("p");
-        summary.className = "summary";
-        summary.innerHTML = "Web Developer Intern skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.";
-        
-        const eduName = document.createElement("h3");
-        eduName.className = "eduName";
-        eduName.innerHTML = "Education";
+    // Objective & Education
+    const infoBox = document.createElement("div");
+    infoBox.className = "profileInfoBox";
+    infoBox.innerHTML = `
+        <h3 class="profileSectionTitle">Objective</h3>
+        <p class="profileSummary">
+            Web Developer skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.
+        </p>
+        <h3 class="profileSectionTitle">Education</h3>
+        <p class="profileEducation">
+            Bachelor of Computer Applications (BCA)<br>
+            Rashtrasant Tukadoji Maharaj Nagpur University<br>
+            2022 – 2025
+        </p>
+    `;
+    profileCard.appendChild(infoBox);
 
-        const education = document.createElement("p");
-        education.className = "education";
-        education.innerHTML = "Bachelor of Computer Applications (BCA)<br>Rashtrasant Tukadoji Maharaj Nagpur University <br> 2022 – 2025<br><br>"
-        
-        const eduSumBox = document.createElement('div');
-        eduSumBox.className = "eduSumBox";
-        eduSumBox.appendChild(eduName);
-        eduSumBox.appendChild(education);
-        eduSumBox.appendChild(objective);
-        eduSumBox.appendChild(summary);
-        displayarea.appendChild(eduSumBox);
-        
-        let isFollowing = localStorage.getItem('isFollowing') === 'true';
-        followButton.innerHTML = isFollowing ? 'Unfollow' : 'Follow';
+    displayarea.appendChild(profileCard);
 
-        if(isFollowing){
-            followCount.innerHTML = parseInt(followCount.innerHTML) + 1;
-        }
-        followButton.addEventListener('click',()=>{
-            isFollowing = !isFollowing;
-            followButton.innerHTML = isFollowing ? 'Unfollow' : 'Follow';
-            const currentCount = parseInt(followCount.innerHTML);
-            followCount.innerHTML = isFollowing ? currentCount + 1 : currentCount - 1;
-            localStorage.setItem('isFollowing',isFollowing);
-        })
-    } 
-})
+    // Animate in
+    setTimeout(() => {
+        profileCard.classList.add("profileCard-animate");
+    }, 50);
+});
 
 skills.addEventListener('click', () => {
     displayarea.innerHTML = '';
