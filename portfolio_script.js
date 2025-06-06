@@ -3,6 +3,7 @@ const skills = document.querySelector("#skills");
 const certifications = document.querySelector("#certifications");
 const experience = document.querySelector("#experience");
 const project = document.querySelector("#project");
+const contact = document.querySelector("#contact");
 
 const displayarea=document.querySelector(".displayarea");
 displayarea.className="displayarea";
@@ -440,3 +441,52 @@ project.addEventListener('click', () => {
     displayarea.appendChild(projectContainer);
 });
 
+
+contact.addEventListener('click', () => {
+    displayarea.innerHTML = '';
+
+    // Main container
+    const contactContainer = document.createElement("div");
+    contactContainer.className = "contactContainer";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Contact Me";
+    contactContainer.appendChild(heading);
+
+    // Contact Form with default values
+    const form = document.createElement("form");
+    form.className = "contactForm";
+    form.innerHTML = `
+        <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" required value="Aachal Bhonde">
+        </div>
+        <div class="form-group">
+            <label for="contact-address">Address</label>
+            <input type="text" id="contact-address" name="address" required value="Nagpur, Maharashtra, India">
+        </div>
+        <div class="form-group">
+            <label for="contact-phone">Contact</label>
+            <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required value="9373648471">
+        </div>
+        <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required value="aachalbhonde19@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" required>Hello, I am interested in connecting with you! send your message</textarea>
+        </div>
+        <button type="submit" class="contactSubmitBtn">Send Message</button>
+    `;
+    contactContainer.appendChild(form);
+
+    // Optional: Handle form submission (prevent default and show a message)
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        form.reset();
+        alert("Thank you for contacting me!");
+    });
+
+    displayarea.appendChild(contactContainer);
+});
