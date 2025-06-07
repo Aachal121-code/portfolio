@@ -39,7 +39,7 @@ This is a personal portfolio website for Aachal Ashok Bhonde, a Web Developer In
 ## Contact
 
 - Email: aachalbhonde19@gmail.com
-- Phone: 9373648471
+- Phone: 9373******
 - LinkedIn: [https://www.linkedin.com/in/aachal-bhonde-a028b9318/](https://www.linkedin.com/in/aachal-bhonde-a028b9318/)
 - GitHub: [https://github.com/Aachal121-code](https://github.com/Aachal121-code)
 
