@@ -459,23 +459,23 @@ contact.addEventListener('click', () => {
     form.innerHTML = `
         <div class="form-group">
             <label for="contact-name">Name</label>
-            <input type="text" id="contact-name" name="name" required value="Aachal Bhonde">
+            <input type="text" id="contact-name" name="name" required placeholder="Aachal Bhonde">
         </div>
         <div class="form-group">
             <label for="contact-address">Address</label>
-            <input type="text" id="contact-address" name="address" required value="Nagpur, Maharashtra, India">
+            <input type="text" id="contact-address" name="address" required placeholder="Nagpur, Maharashtra, India">
         </div>
         <div class="form-group">
             <label for="contact-phone">Contact</label>
-            <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required value="9373648471">
+            <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{10}" required placeholder="9373648471">
         </div>
         <div class="form-group">
             <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" name="email" required value="aachalbhonde19@gmail.com">
+            <input type="email" id="contact-email" name="email" required placeholder="aachalbhonde19@gmail.com">
         </div>
         <div class="form-group">
             <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows="4" required>Hello, I am interested in connecting with you! send your message</textarea>
+            <textarea id="contact-message" placeholder="Hello, I am interested in connecting with you! send your message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit" class="contactSubmitBtn">Send Message</button>
     `;
