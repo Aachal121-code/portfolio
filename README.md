@@ -19,13 +19,11 @@ This is a personal portfolio website for Aachal Ashok Bhonde, a Web Developer In
 - CSS3 for styling with a modern dark-themed gradient design
 - JavaScript for interactivity including resume download and dynamic content toggling
 - Font Awesome for icons
-- React.js (mentioned in skills and projects, though not directly used in this static site)
-- REST APIs (used in some projects)
 
 ## How to Run Locally
 
 1. Clone or download the repository to your local machine.
-2. Open the `index.html` file in any modern web browser.
+2. Open the `porfolio_html.html` file in any modern web browser.
 3. The website is fully static and does not require any server setup.
 
 ## Project Structure
@@ -33,7 +31,6 @@ This is a personal portfolio website for Aachal Ashok Bhonde, a Web Developer In
 - `portfolio_html.html` - Main HTML file containing the website structure
 - `portfolio_css.css` - CSS file for styling the website
 - `portfolio_script.js` - JavaScript file for interactive features
-- `resume.pdf` - Downloadable resume linked from the site
 - `certificates/` - Folder containing certificate images displayed on the site
 
 ## Contact
