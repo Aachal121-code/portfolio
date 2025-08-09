@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aachal Ashok Bhonde - App Developer Intern</title>
+    <meta name="description" content="Portfolio of Aachal Ashok Bhonde, App Developer Intern skilled in responsive web applications">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Avatar and Hero UI improvements */
+        .avatar-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .avatar-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            font-size: 6rem;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+            border: 4px solid #fff;
+            margin: 0 auto 0.5rem auto;
+            transition: box-shadow 0.3s;
+        }
+        .avatar-icon:hover {
+            box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+        }
+        .hero-content h1 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+        }
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #fffbe7;
+            margin-bottom: 1.2rem;
+        }
+        .hero-content .contact-info {
+            margin: 1.2rem 0 0.5rem 0;
+        }
+        .hero-content .contact-info p {
+            color: #f3f3f3;
+            font-size: 1.05rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        .social-links a {
+            color: #fff;
+            background: rgba(99,102,241,0.18);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .social-links a:hover {
+            background: #fff;
+            color: var(--primary);
+            transform: translateY(-3px) scale(1.08);
+        }
+        @media (max-width: 480px) {
+            .avatar-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 3.5rem;
+            }
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #ffd700;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --text: #374151;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-content .contact-info {
+            margin: 1rem 0;
+        }
+
+        .hero-content .contact-info p {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        /* About */
+        .about-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .cert-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Experience */
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .experience-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card .date {
+            color: var(--text);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #4f46e5;
+        }
+
+        /* Contact */
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .skills-grid,
+            .cert-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+        }
+        .avatar-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .avatar-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            font-size: 6rem;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+            border: 4px solid #fff;
+        }
+        @media (max-width: 480px) {
+            .avatar-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Aachal Bhonde</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                    <div class="avatar-wrapper">
+                        <span class="avatar-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </span>
+                    </div>
+                    <h1 style="font-size:2.7rem; font-weight:800; letter-spacing:1px;">Aachal Ashok Bhonde</h1>
+                    <p class="subtitle" style="font-size:1.3rem; font-weight:500; color:#fffbe7;">App Developer Intern</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> aachalbhonde19@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 9373648471</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Aachal121-code" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p><strong>App Developer Intern</strong> skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.</p>
+                    <p><strong>Education:</strong> Bachelor of Computer Applications (BCA) - Rashtrasant Tukadoji Maharaj Nagpur University (2022 – 2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python (Basics)</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">SQL (Basics)</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">DOM Manipulation</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Responsive Web Design</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">Component-Based Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <h3>C Programming</h3>
+                        <p>MKCL</p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>C++ Programming</h3>
+                        <p>MKCL</p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>Python Programming</h3>
+                        <p>MKCL</p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>Web Development</h3>
+                        <p>Crescentweb Technology</p>
+                    </div>
+                    <div class="cert-card">
+                        <h3>Code without Barriers Program</h3>
+                        <p>RT-MSSU</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-card">
+                    <h3>Student Developer</h3>
+                    <p class="date">2022 – Present</p>
+                    <p><strong>Rashtrasant Tukadoji Maharaj Nagpur University</strong></p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Developed front-end projects using HTML, CSS, JavaScript, and React.js</li>
+                        <li>Applied Agile methodology and version control (Git) to track project development and collaborate with peers</li>
+                        <li>Improved algorithmic problem-solving speed and accuracy by 30% through regular practice on coding platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Contact Management App</h3>
+                        <p class="project-tech">React, JavaScript, CSS</p>
+                        <p>Built a single-page React application for managing contact data with CRUD operations and local storage persistence. Used React hooks for state management and component reusability.</p>
+                        <a href="https://github.com/Aachal121-code/contact-app" class="btn" target="_blank">View Project</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Currency Converter</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript, REST API</p>
+                        <p>Created a web app that integrates real-time currency exchange data using a public RESTful API. Implemented input validation, loading indicators, and responsive UI.</p>
+                        <a href="https://github.com/Aachal121-code/Currency-Converter" class="btn" target="_blank">View Project</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Responsive Portfolio Website</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript</p>
+                        <p>Developed a visually appealing portfolio website using HTML5 and modern CSS techniques, including Flexbox and media queries. Clean, user-friendly design optimized for multiple devices.</p>
+                        <a href="https://github.com/Aachal121-code/portfolio" class="btn" target="_blank">View Project</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>BMI Calculator</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript</p>
+                        <p>A simple and user-friendly BMI Calculator that helps users determine their Body Mass Index based on height and weight. Provides instant feedback on health status.</p>
+                        <a href="https://github.com/Aachal121-code/BMI-calculator" class="btn" target="_blank">View Project</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Todo-list</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript</p>
+                        <p>A simple and intuitive Todo List application that helps manage tasks efficiently. Allows users to create, update, delete, and mark tasks as completed.</p>
+                        <a href="https://github.com/Aachal121-code/ToDo-list" class="btn" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:9373648471">9373648471</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="https://github.com/Aachal121-code" target="_blank" style="color: var(--primary); margin: 0 0.5rem;"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" style="color: var(--primary); margin: 0 0.5rem;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: var(--dark); color: white; text-align: center; padding: 1rem;">
+        <p>&copy; 2024 Aachal Ashok Bhonde. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
