@@ -276,16 +276,47 @@
         }
 
         .cert-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.10), 0 1.5px 6px rgba(0,0,0,0.07);
             text-align: center;
+            position: relative;
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+        .cert-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.16), 0 2px 8px rgba(0,0,0,0.10);
         }
 
         .cert-card h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .cert-card p {
+            color: #555;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        .cert-card .cert-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 1px 4px rgba(99,102,241,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.18s;
+            margin-top: 0.2rem;
+        }
+        .cert-card .cert-btn:hover {
+            background: #fff;
+            color: var(--primary);
+            transform: scale(1.07);
         }
 
         /* Experience */
@@ -429,6 +460,103 @@
                 font-size: 3.5rem;
             }
         }
+        .home-professional {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem 0;
+        }
+        .hero-left {
+            flex: 0 0 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.7rem;
+        }
+        .hero-name {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+            color: #fff;
+        }
+        .hero-role {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fffbe7;
+            margin-bottom: 0.5rem;
+        }
+        .hero-summary {
+            color: #f3f3f3;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0.5rem 0;
+            color: #f3f3f3;
+            font-size: 1.05rem;
+        }
+        .hero-contact li {
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hero-contact a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .hero-contact a:hover {
+            color: var(--secondary);
+        }
+        .hero-social {
+            display: flex;
+            gap: 1.2rem;
+            margin: 0.5rem 0 0 0;
+        }
+        .hero-social a {
+            color: #fff;
+            background: rgba(99,102,241,0.18);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .hero-social a:hover {
+            background: #fff;
+            color: var(--primary);
+            transform: translateY(-3px) scale(1.08);
+        }
+        @media (max-width: 900px) {
+            .home-professional {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.2rem 0;
+            }
+            .hero-right {
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -451,22 +579,31 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                    <div class="avatar-wrapper">
-                        <span class="avatar-icon">
-                            <i class="fas fa-user-circle"></i>
-                        </span>
+                <div class="hero-content home-professional">
+                    <div class="hero-left">
+                        <div class="avatar-wrapper">
+                            <span class="avatar-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h1 style="font-size:2.7rem; font-weight:800; letter-spacing:1px;">Aachal Ashok Bhonde</h1>
-                    <p class="subtitle" style="font-size:1.3rem; font-weight:500; color:#fffbe7;">App Developer Intern</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> aachalbhonde19@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> 9373648471</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Aachal121-code" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <div class="hero-right">
+                        <h1 class="hero-name">Aachal Ashok Bhonde</h1>
+                        <p class="hero-role">App Developer Intern</p>
+                        <p class="hero-summary">
+                            Passionate about building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js.<br>
+                            Strong in problem-solving, clean code, and modern web fundamentals.<br>
+                            Open to opportunities in fast-paced, innovative teams.
+                        </p>
+                        <ul class="hero-contact">
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:9373648471">9373648471</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</li>
+                        </ul>
+                        <div class="hero-social">
+                            <a href="https://github.com/Aachal121-code" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -532,22 +669,27 @@
                     <div class="cert-card">
                         <h3>C Programming</h3>
                         <p>MKCL</p>
+                        <a class="cert-btn" href="certificates/C_programming.jpg" target="_blank">View</a>
                     </div>
                     <div class="cert-card">
                         <h3>C++ Programming</h3>
                         <p>MKCL</p>
+                        <a class="cert-btn" href="certificates/C++_programming.jpg" target="_blank">View</a>
                     </div>
                     <div class="cert-card">
                         <h3>Python Programming</h3>
                         <p>MKCL</p>
+                        <a class="cert-btn" href="certificates/Python.jpg" target="_blank">View</a>
                     </div>
                     <div class="cert-card">
                         <h3>Web Development</h3>
                         <p>Crescentweb Technology</p>
+                        <a class="cert-btn" href="certificates/Web_development.jpg" target="_blank">View</a>
                     </div>
                     <div class="cert-card">
                         <h3>Code without Barriers Program</h3>
                         <p>RT-MSSU</p>
+                        <a class="cert-btn" href="certificates/codeWbarriers.png" target="_blank">View</a>
                     </div>
                 </div>
             </div>
