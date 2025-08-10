@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aachal Ashok Bhonde - App Developer Intern</title>
-    <meta name="description" content="Portfolio of Aachal Ashok Bhonde, App Developer Intern skilled in responsive web applications">
+    <meta name="description"
+        content="Portfolio of Aachal Ashok Bhonde, App Developer Intern skilled in responsive web applications">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         /* Avatar and Hero UI improvements */
@@ -14,6 +16,7 @@
             align-items: center;
             margin-bottom: 0.5rem;
         }
+
         .avatar-icon {
             display: flex;
             justify-content: center;
@@ -24,42 +27,49 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
             font-size: 6rem;
-            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+            box-shadow: 0 4px 24px rgba(99, 102, 241, 0.15);
             border: 4px solid #fff;
             margin: 0 auto 0.5rem auto;
             transition: box-shadow 0.3s;
         }
+
         .avatar-icon:hover {
-            box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.25);
         }
+
         .hero-content h1 {
             font-size: 2.7rem;
             font-weight: 800;
             letter-spacing: 1px;
             margin-bottom: 0.2rem;
         }
+
         .hero-content .subtitle {
             font-size: 1.3rem;
             font-weight: 500;
             color: #fffbe7;
             margin-bottom: 1.2rem;
         }
+
         .hero-content .contact-info {
             margin: 1.2rem 0 0.5rem 0;
         }
+
         .hero-content .contact-info p {
             color: #f3f3f3;
             font-size: 1.05rem;
         }
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.2rem;
             margin: 1.5rem 0 0.5rem 0;
         }
+
         .social-links a {
             color: #fff;
-            background: rgba(99,102,241,0.18);
+            background: rgba(99, 102, 241, 0.18);
             border-radius: 50%;
             width: 44px;
             height: 44px;
@@ -67,27 +77,32 @@
             align-items: center;
             justify-content: center;
             font-size: 1.7rem;
-            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
             transition: background 0.2s, color 0.2s, transform 0.2s;
         }
+
         .social-links a:hover {
             background: #fff;
             color: var(--primary);
             transform: translateY(-3px) scale(1.08);
         }
+
         @media (max-width: 480px) {
             .avatar-icon {
                 width: 80px;
                 height: 80px;
                 font-size: 3.5rem;
             }
+
             .hero-content h1 {
                 font-size: 1.5rem;
             }
+
             .hero-content .subtitle {
                 font-size: 1rem;
             }
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -119,7 +134,7 @@
         /* Header */
         header {
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -170,7 +185,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, rgb(10, 10, 66), rgb(220, 215, 215));
             color: white;
             padding: 4rem 0;
             text-align: center;
@@ -233,12 +248,13 @@
             background: #fff;
             padding: 2rem;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
             margin-bottom: 2rem;
             transition: box-shadow 0.2s, transform 0.2s;
         }
+
         .about-content:hover {
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16);
             transform: scale(1.01) translateY(-2px);
         }
 
@@ -254,11 +270,12 @@
             background: linear-gradient(135deg, #ede9fe 60%, #f3f4f6 100%);
             padding: 1.7rem 1.2rem 1.2rem 1.2rem;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
             transition: box-shadow 0.2s, transform 0.2s;
         }
+
         .skill-category:hover {
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16);
             transform: scale(1.01) translateY(-2px);
         }
 
@@ -276,7 +293,7 @@
         }
 
         .skill-tag {
-            background: linear-gradient(90deg, #5b21b6 60%, #818cf8 100%);
+            background: linear-gradient(90deg, #180f67 60%, #6069b3 100%);
             color: #fff;
             padding: 0.5rem 1.1rem;
             border-radius: 20px;
@@ -284,14 +301,76 @@
             border: none;
             font-weight: 600;
             letter-spacing: 0.5px;
-            box-shadow: 0 1px 4px rgba(91,33,182,0.10);
+            box-shadow: 0 1px 4px rgba(91, 33, 182, 0.10);
             transition: background 0.18s, color 0.18s, transform 0.18s;
             cursor: pointer;
         }
+
         .skill-tag:hover {
-            background: linear-gradient(90deg, #818cf8 60%, #5b21b6 100%);
+            background: linear-gradient(45deg, #1a2364 60%, #7277b4 100%);
             color: #fbbf24;
-            transform: scale(1.08) translateY(-2px);
+            transform: scale(1.03) translateY(-2px);
+        }
+
+        .lang-progress-bar {
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+
+        .lang-progress-bar span:first-child {
+            display: inline-block;
+            min-width: 110px;
+            color: #232946;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .skill-progress {
+            width: 100%;
+            background: #e0e7ef;
+            border-radius: 12px;
+            height: 18px;
+            margin-top: 0.2rem;
+            margin-bottom: 0;
+            overflow: hidden;
+            box-shadow: 0 1px 4px #e0e7ff;
+            border: 1.5px solid #d1d5db;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-progress-bar {
+            height: 100%;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #a5b4fc 0%, #818cf8 60%, #5b21b6 100%);
+            transition: width 1.2s cubic-bezier(.77, 0, .18, 1);
+            box-shadow: 0 1px 4px #a5b4fc44;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .skill-pct {
+            position: absolute;
+            right: 12px;
+            color: #232946;
+            font-size: 0.98rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        @media (max-width: 900px) {
+            .skills-section-flex {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .skills-list-col,
+            .skills-progress-col {
+                max-width: 100%;
+            }
         }
 
         /* Certifications */
@@ -305,14 +384,15 @@
             background: linear-gradient(135deg, #ede9fe 60%, #f3f4f6 100%);
             padding: 2rem 1.5rem 1.5rem 1.5rem;
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
             text-align: center;
             position: relative;
             transition: transform 0.18s, box-shadow 0.18s;
         }
+
         .cert-card:hover {
             transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16), 0 2px 8px rgba(0,0,0,0.10);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16), 0 2px 8px rgba(0, 0, 0, 0.10);
         }
 
         .cert-card h3 {
@@ -321,11 +401,13 @@
             font-size: 1.25rem;
             font-weight: 700;
         }
+
         .cert-card p {
             color: #555;
             margin-bottom: 1.2rem;
             font-size: 1rem;
         }
+
         .cert-card .cert-btn {
             display: inline-block;
             background: var(--primary);
@@ -335,10 +417,11 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            box-shadow: 0 1px 4px rgba(99,102,241,0.10);
+            box-shadow: 0 1px 4px rgba(99, 102, 241, 0.10);
             transition: background 0.2s, color 0.2s, transform 0.18s;
             margin-top: 0.2rem;
         }
+
         .cert-card .cert-btn:hover {
             background: #fff;
             color: var(--primary);
@@ -350,12 +433,13 @@
             background: #fff;
             padding: 2rem;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
-            margin-bottom: 1rem;
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
+            margin: 6rem;
             transition: box-shadow 0.2s, transform 0.2s;
         }
+
         .experience-card:hover {
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16);
             transform: scale(1.01) translateY(-2px);
         }
 
@@ -381,11 +465,12 @@
             background: linear-gradient(135deg, #ede9fe 60%, #f3f4f6 100%);
             padding: 1.7rem 1.2rem 1.2rem 1.2rem;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
             transition: box-shadow 0.2s, transform 0.2s;
         }
+
         .project-card:hover {
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16);
             transform: scale(1.01) translateY(-2px);
         }
 
@@ -409,7 +494,7 @@
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.5px;
-            box-shadow: 0 1px 4px rgba(91,33,182,0.10);
+            box-shadow: 0 1px 4px rgba(91, 33, 182, 0.10);
             transition: background 0.2s, color 0.2s, transform 0.18s;
             margin-top: 1rem;
         }
@@ -425,12 +510,13 @@
             background: #fff;
             padding: 2rem;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(91,33,182,0.10);
+            box-shadow: 0 4px 24px rgba(91, 33, 182, 0.10);
             text-align: center;
             transition: box-shadow 0.2s, transform 0.2s;
         }
+
         .contact-info:hover {
-            box-shadow: 0 8px 32px rgba(91,33,182,0.16);
+            box-shadow: 0 8px 32px rgba(91, 33, 182, 0.16);
             transform: scale(1.01) translateY(-2px);
         }
 
@@ -480,12 +566,14 @@
                 padding: 2rem 0;
             }
         }
+
         .avatar-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 0.5rem;
         }
+
         .avatar-icon {
             display: flex;
             justify-content: center;
@@ -496,9 +584,10 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
             font-size: 14rem;
-            box-shadow: 0 4px 24px rgba(99,102,241,0.15);
+            box-shadow: 0 4px 24px rgba(99, 102, 241, 0.15);
             border: 4px solid #fff;
         }
+
         @media (max-width: 480px) {
             .avatar-icon {
                 width: 120px;
@@ -506,6 +595,7 @@
                 font-size: 6rem;
             }
         }
+
         .home-professional {
             display: flex;
             flex-direction: row;
@@ -514,6 +604,7 @@
             gap: 3rem;
             padding: 2rem 0;
         }
+
         .hero-left {
             flex: 0 0 160px;
             display: flex;
@@ -521,6 +612,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .hero-right {
             flex: 1;
             display: flex;
@@ -529,6 +621,7 @@
             justify-content: center;
             gap: 0.7rem;
         }
+
         .hero-name {
             font-size: 2.3rem;
             font-weight: 800;
@@ -536,13 +629,14 @@
             margin-bottom: 0.2rem;
             color: #fff;
         }
+
         .hero-role {
             font-size: 1.2rem;
             font-weight: 600;
             color: #fffbe7;
             margin-bottom: 0.5rem;
         }
-        
+
         .hero-contact {
             list-style: none;
             padding: 0;
@@ -550,28 +644,33 @@
             color: #f3f3f3;
             font-size: 1.05rem;
         }
+
         .hero-contact li {
             margin-bottom: 0.3rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+
         .hero-contact a {
             color: #fff;
             text-decoration: underline;
             transition: color 0.2s;
         }
+
         .hero-contact a:hover {
             color: var(--secondary);
         }
+
         .hero-social {
             display: flex;
             gap: 1.2rem;
             margin: 0.5rem 0 0 0;
         }
+
         .hero-social a {
             color: #fff;
-            background: rgba(99,102,241,0.18);
+            background: rgba(99, 102, 241, 0.18);
             border-radius: 50%;
             width: 44px;
             height: 44px;
@@ -579,28 +678,31 @@
             align-items: center;
             justify-content: center;
             font-size: 1.7rem;
-            box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.10);
             transition: background 0.2s, color 0.2s, transform 0.2s;
         }
+
         .hero-social a:hover {
             background: #fff;
             color: var(--primary);
             transform: translateY(-3px) scale(1.08);
         }
+
         @media (max-width: 900px) {
             .home-professional {
                 flex-direction: column;
                 gap: 1.5rem;
                 padding: 1.2rem 0;
             }
+
             .hero-right {
                 align-items: center;
                 text-align: center;
             }
         }
-        
     </style>
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -633,18 +735,21 @@
                         <h1 class="hero-name">Aachal Ashok Bhonde</h1>
                         <p class="hero-role">App Developer Intern</p>
                         <ul class="hero-contact">
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></li>
+                            <li><i class="fas fa-envelope"></i> <a
+                                    href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></li>
                             <li><i class="fas fa-phone"></i> <a href="tel:9373648471">9373648471</a></li>
                             <li><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</li>
                         </ul>
                         <div class="hero-social">
-                            <a href="https://github.com/Aachal121-code" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Aachal121-code" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        
+
         </section>
 
         <!-- About Section -->
@@ -652,8 +757,12 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <p><strong>App Developer Intern</strong> skilled in building responsive, user-centric web applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems with clean, modular code and strong fundamentals in data structures. Eager to contribute to fast-paced development teams with a focus on performance, usability, and innovation.</p>
-                    <p><strong>Education:</strong> Bachelor of Computer Applications (BCA) - Rashtrasant Tukadoji Maharaj Nagpur University (2022 – 2025)</p>
+                    <p><strong>App Developer Intern</strong> skilled in building responsive, user-centric web
+                        applications using HTML, CSS, JavaScript, and React.js. Proven ability to solve complex problems
+                        with clean, modular code and strong fundamentals in data structures. Eager to contribute to
+                        fast-paced development teams with a focus on performance, usability, and innovation.</p>
+                    <p><strong>Education:</strong> Bachelor of Computer Applications (BCA) - Rashtrasant Tukadoji
+                        Maharaj Nagpur University (2022 – 2025)</p>
                 </div>
             </div>
         </section>
@@ -664,91 +773,100 @@
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Languages</h3>
                         <div class="skill-list">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python (Basics)</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">SQL (Basics)</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Frameworks & Libraries</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">React.js</span>
-                            <span class="skill-tag">Bootstrap</span>
-                            <span class="skill-tag">DOM Manipulation</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Responsive Web Design</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                            <span class="skill-tag">Component-Based Architecture</span>
+                            <div class="container">
+                                <div class="skills-section-flex"
+                                    style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: flex-start; justify-content: center;">
+                                    <div class="skills-progress-col"
+                                        style="flex:1 1 320px; min-width:260px; max-width:400px; background: #f8fafc; border-radius: 18px; box-shadow: 0 2px 12px #e0e7ff; padding: 2rem 1.5rem; margin-bottom: 1.5rem;">
+                                        <h3 style="color:#5b21b6; font-size:1.2rem; margin-bottom:1.5rem;">Languages
+                                        </h3>
+                                        <div class="lang-progress-bar" data-pct="90"><span>HTML5</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="80"><span>CSS3</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="80"><span>JavaScript</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="60"><span>Python (Basics)</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="80"><span>C</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="50"><span>C++</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="lang-progress-bar" data-pct="50"><span>SQL (Basics)</span>
+                                            <div class="skill-progress">
+                                                <div class="skill-progress-bar" style="width:0%"></div><span
+                                                    class="skill-pct">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skills-list-col"
+                                        style="flex:2 1 480px; min-width:320px; max-width:100%; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:stretch;">
+                                        <div class="skill-category">
+                                            <h3>Frameworks & Libraries</h3>
+                                            <div class="skill-list">
+                                                <span class="skill-tag">React.js</span>
+                                                <span class="skill-tag">Bootstrap</span>
+                                                <span class="skill-tag">DOM Manipulation</span>
+                                            </div>
+                                        </div>
+                                        <div class="skill-category">
+                                            <h3>Tools & Technologies</h3>
+                                            <div class="skill-list">
+                                                <span class="skill-tag">Git</span>
+                                                <span class="skill-tag">GitHub</span>
+                                                <span class="skill-tag">VS Code</span>
+                                                <span class="skill-tag">Responsive Web Design</span>
+                                                <span class="skill-tag">RESTful APIs</span>
+                                                <span class="skill-tag">Component-Based Architecture</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="section">
-            <div class="container">
-                <h2 class="section-title">Certifications</h2>
-                <div class="cert-grid">
-                    <div class="cert-card">
-                        <h3>C Programming</h3>
-                        <p>MKCL</p>
-                        <a class="cert-btn" href="certificates/C_programming.jpg" target="_blank">View</a>
-                    </div>
-                    <div class="cert-card">
-                        <h3>C++ Programming</h3>
-                        <p>MKCL</p>
-                        <a class="cert-btn" href="certificates/C++_programming.jpg" target="_blank">View</a>
-                    </div>
-                    <div class="cert-card">
-                        <h3>Python Programming</h3>
-                        <p>MKCL</p>
-                        <a class="cert-btn" href="certificates/Python.jpg" target="_blank">View</a>
-                    </div>
-                    <div class="cert-card">
-                        <h3>Web Development</h3>
-                        <p>Crescentweb Technology</p>
-                        <a class="cert-btn" href="certificates/Web_development.jpg" target="_blank">View</a>
-                    </div>
-                    <div class="cert-card">
-                        <h3>Code without Barriers Program</h3>
-                        <p>RT-MSSU</p>
-                        <a class="cert-btn" href="certificates/codeWbarriers.png" target="_blank">View</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                <div class="experience-card">
-                    <h3>Student Developer</h3>
-                    <p class="date">2022 – Present</p>
-                    <p><strong>Rashtrasant Tukadoji Maharaj Nagpur University</strong></p>
-                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                        <li>Developed front-end projects using HTML, CSS, JavaScript, and React.js</li>
-                        <li>Applied Agile methodology and version control (Git) to track project development and collaborate with peers</li>
-                        <li>Improved algorithmic problem-solving speed and accuracy by 30% through regular practice on coding platforms</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-card">
+            <h3>Student Developer</h3>
+            <p class="date">2022 – Present</p>
+            <p><strong>Rashtrasant Tukadoji Maharaj Nagpur University</strong></p>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                <li>Developed front-end projects using HTML, CSS, JavaScript, and React.js</li>
+                <li>Applied Agile methodology and version control (Git) to track project development and collaborate
+                    with peers</li>
+                <li>Improved algorithmic problem-solving speed and accuracy by 30% through regular practice on coding
+                    platforms</li>
+            </ul>
+        </div>
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
@@ -757,43 +875,59 @@
                     <div class="project-card">
                         <h3>Contact Management App</h3>
                         <p class="project-tech">React, JavaScript, CSS</p>
-                        <p>Built a single-page React application for managing contact data with CRUD operations and local storage persistence. Used React hooks for state management and component reusability.</p>
-                        <a href="https://github.com/Aachal121-code/contact-app" class="btn" target="_blank">View Project</a>
+                        <p>Built a single-page React application for managing contact data with CRUD operations and
+                            local storage persistence. Used React hooks for state management and component reusability.
+                        </p>
+                        <a href="https://github.com/Aachal121-code/contact-app" class="btn" target="_blank">View
+                            Project</a>
                     </div>
-                    
+
                     <div class="project-card">
                         <h3>Currency Converter</h3>
                         <p class="project-tech">HTML, CSS, JavaScript, REST API</p>
-                        <p>Created a web app that integrates real-time currency exchange data using a public RESTful API. Implemented input validation, loading indicators, and responsive UI.</p>
-                        <a href="https://github.com/Aachal121-code/Currency-Converter" class="btn" target="_blank">View Project</a>
+                        <p>Created a web app that integrates real-time currency exchange data using a public RESTful
+                            API. Implemented input validation, loading indicators, and responsive UI.</p>
+                        <a href="https://github.com/Aachal121-code/Currency-Converter" class="btn" target="_blank">View
+                            Project</a>
                     </div>
-                    
+
                     <div class="project-card">
                         <h3>Responsive Portfolio Website</h3>
                         <p class="project-tech">HTML, CSS, JavaScript</p>
-                        <p>Developed a visually appealing portfolio website using HTML5 and modern CSS techniques, including Flexbox and media queries. Clean, user-friendly design optimized for multiple devices.</p>
-                        <a href="https://github.com/Aachal121-code/portfolio" class="btn" target="_blank">View Project</a>
+                        <p>Developed a visually appealing portfolio website using HTML5 and modern CSS techniques,
+                            including Flexbox and media queries. Clean, user-friendly design optimized for multiple
+                            devices.</p>
+                        <a href="https://github.com/Aachal121-code/portfolio" class="btn" target="_blank">View
+                            Project</a>
                     </div>
-                    
+
                     <div class="project-card">
                         <h3>BMI Calculator</h3>
                         <p class="project-tech">HTML, CSS, JavaScript</p>
-                        <p>A simple and user-friendly BMI Calculator that helps users determine their Body Mass Index based on height and weight. Provides instant feedback on health status.</p>
-                        <a href="https://github.com/Aachal121-code/BMI-calculator" class="btn" target="_blank">View Project</a>
+                        <p>A simple and user-friendly BMI Calculator that helps users determine their Body Mass Index
+                            based on height and weight. Provides instant feedback on health status.</p>
+                        <a href="https://github.com/Aachal121-code/BMI-calculator" class="btn" target="_blank">View
+                            Project</a>
                     </div>
-                    
+
                     <div class="project-card">
                         <h3>Todo-list</h3>
                         <p class="project-tech">HTML, CSS, JavaScript</p>
-                        <p>A simple and intuitive Todo List application that helps manage tasks efficiently. Allows users to create, update, delete, and mark tasks as completed.</p>
-                        <a href="https://github.com/Aachal121-code/ToDo-list" class="btn" target="_blank">View Project</a>
+                        <p>A simple and intuitive Todo List application that helps manage tasks efficiently. Allows
+                            users to create, update, delete, and mark tasks as completed.</p>
+                        <a href="https://github.com/Aachal121-code/ToDo-list" class="btn" target="_blank">View
+                            Project</a>
                     </div>
-                    
+
                     <div class="project-card">
                         <h3>fruitMart</h3>
                         <p class="project-tech">HTML, CSS, JavaScript</p>
-                        <p>FruitMart is a responsive and modern website designed to showcase fresh fruits, fruit baskets, and organic products. The site emphasizes freshness, quality, and convenience, providing users with an engaging shopping experience. It features a clean design with intuitive navigation and interactive elements to enhance user engagement.</p>
-                        <a href="https://github.com/Aachal121-code/FruitMart" class="btn" target="_blank">View Project</a>
+                        <p>FruitMart is a responsive and modern website designed to showcase fresh fruits, fruit
+                            baskets, and organic products. The site emphasizes freshness, quality, and convenience,
+                            providing users with an engaging shopping experience. It features a clean design with
+                            intuitive navigation and interactive elements to enhance user engagement.</p>
+                        <a href="https://github.com/Aachal121-code/FruitMart" class="btn" target="_blank">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -804,12 +938,17 @@
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:aachalbhonde19@gmail.com">aachalbhonde19@gmail.com</a></p>
                     <p><i class="fas fa-phone"></i> <a href="tel:9373648471">9373648471</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> Bajrang Nagar, Manewada Road, Nagpur-440027</p>
                     <div class="social-links" style="margin-top: 1rem;">
-                        <a href="https://github.com/Aachal121-code" target="_blank" style="color: var(--primary); margin: 0 1rem; padding: 2rem;"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank" style="color: var(--primary); margin: 0 1rem; padding: 2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Aachal121-code" target="_blank"
+                            style="color: var(--primary); margin: 0 1rem; padding: 2rem;"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aachal-bhonde-a028b9318/" target="_blank"
+                            style="color: var(--primary); margin: 0 1rem; padding: 2rem;"><i
+                                class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -821,6 +960,41 @@
     </footer>
 
     <script>
+        // Animate language progress bars on scroll into view
+        function animateLangBars() {
+            document.querySelectorAll('.lang-progress-bar').forEach(function (bar) {
+                var pct = bar.getAttribute('data-pct');
+                var progress = bar.querySelector('.skill-progress-bar');
+                var pctText = bar.querySelector('.skill-pct');
+                progress.style.width = pct + '%';
+                pctText.textContent = pct + '%';
+            });
+        }
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top < (window.innerHeight - 60) && rect.bottom > 0
+            );
+        }
+        let langAnimated = false;
+        window.addEventListener('scroll', function () {
+            if (!langAnimated) {
+                var langCol = document.querySelector('.skills-progress-col');
+                if (langCol && isInViewport(langCol)) {
+                    animateLangBars();
+                    langAnimated = true;
+                }
+            }
+        });
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var langCol = document.querySelector('.skills-progress-col');
+                if (langCol && isInViewport(langCol)) {
+                    animateLangBars();
+                    langAnimated = true;
+                }
+            }, 300);
+        });
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
@@ -837,4 +1011,5 @@
         });
     </script>
 </body>
+
 </html>
