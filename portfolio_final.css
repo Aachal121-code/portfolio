@@ -1,3 +1,50 @@
+/* Mobile Nav Container */
+.mobile-nav-container {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    z-index: 999;
+    animation: slideDown 0.35s cubic-bezier(.4,2,.6,1) forwards;
+}
+.mobile-nav-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+}
+.mobile-nav-container a {
+    color: #312e81;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.mobile-nav-container a:hover {
+    background: linear-gradient(90deg, #5b21b6, #fbbf24);
+    color: #fff;
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-container {
+        display: none;
+    }
+    .mobile-nav-container.active {
+        display: block;
+    }
+}
         /* Avatar and Hero UI improvements */
         .avatar-wrapper {
             display: flex;

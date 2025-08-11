@@ -34,8 +34,20 @@
             }, 300);
         });
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                mobileNav.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
         }
 
         // Smooth scrolling for anchor links
