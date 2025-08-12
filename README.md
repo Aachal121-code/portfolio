@@ -1,42 +1,50 @@
 # Portfolio Website - Aachal Ashok Bhonde
 
-This is a personal portfolio website for Aachal Ashok Bhonde, a Web Developer Intern. The website showcases professional summary, education, technical skills, certificates, experience, projects, and contact information. It is designed to present skills and projects effectively to potential employers or collaborators.
+This is a modern, responsive personal portfolio website for Aachal Ashok Bhonde, Web Developer Intern. The site highlights professional experience, education, technical skills, certifications, projects, and contact information in a visually appealing and mobile-friendly format.
 
 ## Features
 
-- Responsive and user-friendly design with smooth scrolling and section snapping
-- Introduction section with contact details and links to LinkedIn and GitHub profiles
-- Professional summary and education background
-- Technical skills display with toggle to view certificates
-- Experience section highlighting relevant work and achievements
-- Projects showcase with descriptions and technologies used
-- Downloadable resume button for easy access to CV
-- Contact form for suggestions or inquiries
+- Fully responsive design for desktop, tablet, and mobile
+- Modern hero section with animated gradient name and avatar
+- Animated skill progress bars and skill tags
+- Certifications and projects displayed in card layouts
+- Downloadable resume button
+- Smooth scrolling navigation and mobile-friendly hamburger menu
+- Font Awesome icons for social and contact links
+- Clean, accessible, and easy-to-customize codebase
 
 ## Technologies Used
 
-- HTML5 for structure and content
-- CSS3 for styling with a modern dark-themed gradient design
-- JavaScript for interactivity including resume download and dynamic content toggling
-- Font Awesome for icons
+- HTML5 (structure)
+- CSS3 (modern gradients, flexbox, grid, responsive design)
+- JavaScript (interactivity, animated progress bars, mobile nav)
+- Font Awesome (icons)
 
 ## How to Run Locally
 
-1. Clone or download the repository to your local machine.
-2. Open the `porfolio_html.html` file in any modern web browser.
-3. The website is fully static and does not require any server setup.
+1. Clone or download this repository to your local machine.
+2. Open `portfolio_final.html` in any modern web browser.
+3. No server setup is required; all files are static.
 
 ## Project Structure
 
-- `portfolio_html.html` - Main HTML file containing the website structure
-- `portfolio_css.css` - CSS file for styling the website
-- `portfolio_script.js` - JavaScript file for interactive features
-- `certificates/` - Folder containing certificate images displayed on the site
+- `portfolio_final.html` – Main HTML file
+- `portfolio_final.css` – CSS for all styles and responsive design
+- `portfolio_final.js` – JavaScript for interactivity and animations
+- `resume.pdf` – Downloadable resume
+- `certificates/` – Folder with certificate images
+
+## Customization
+
+- Update your name, role, and social links in `portfolio_final.html`.
+- Add or update skills, certifications, and projects as needed.
+- Replace `resume.pdf` with your own resume file.
+- Add certificate images to the `certificates/` folder.
+
 
 ## Contact
 
 - Email: aachalbhonde19@gmail.com
-- Phone: 9373******
 - LinkedIn: [https://www.linkedin.com/in/aachal-bhonde-a028b9318/](https://www.linkedin.com/in/aachal-bhonde-a028b9318/)
 - GitHub: [https://github.com/Aachal121-code](https://github.com/Aachal121-code)
 
