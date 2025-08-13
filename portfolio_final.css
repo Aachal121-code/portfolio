@@ -403,49 +403,9 @@
             z-index: 2;
         }
 
-        .floating-shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+       
 
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.6;
-        }
-
-        .shape-1 {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #6366f1, #818cf8);
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ffd700, #ffed4e);
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .shape-3 {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #a855f7, #c084fc);
-            top: 40%;
-            left: 80%;
-            animation-delay: 4s;
-        }
-
+        
         @keyframes float {
             0%, 100% {
                 transform: translateY(0px) rotate(0deg);
