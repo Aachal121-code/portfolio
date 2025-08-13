@@ -610,7 +610,7 @@
         .skill-progress-bar {
             height: 100%;
             border-radius: 12px;
-            background: linear-gradient(90deg, #a5b4fc 0%, #818cf8 60%, #5b21b6 100%);
+            background: linear-gradient(90deg, #96a0d3 0%, #5c67c7 60%, #2b21b6 100%);
             transition: width 1.2s cubic-bezier(.77, 0, .18, 1);
             box-shadow: 0 1px 4px #a5b4fc44;
             position: absolute;
